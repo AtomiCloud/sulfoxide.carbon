@@ -19,48 +19,6 @@
 ---
 
 ---
-# Source: atomi-app-of-apps/templates/projects.yaml
-apiVersion: argoproj.io/v1alpha1
-kind: AppProject
-metadata:
-  name: bootstrap
-  labels:
-    helm.sh/chart: atomi-app-of-apps-1.0.0
-    app.kubernetes.io/name: atomi-app-of-apps
-    app.kubernetes.io/instance: app-of-apps
-    "atomi.cloud/landscape": "pichu"
-    "atomi.cloud/layer": "1"
-    "atomi.cloud/platform": "systems"
-    "atomi.cloud/service": "bootstrap"
-    app.kubernetes.io/version: "0.1.0"
-    app.kubernetes.io/managed-by: Helm
-
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-  annotations:
-    "atomi.cloud/landscape": "pichu"
-    "atomi.cloud/layer": "1"
-    "atomi.cloud/platform": "systems"
-    "atomi.cloud/service": "bootstrap"
-    app.kubernetes.io/version: "0.1.0"
-    app.kubernetes.io/managed-by: Helm
-spec:
-  description: "Bootstrap Project used to setup the cluster"
-
-  sourceRepos:
-    - "*"
-
-  destinations:
-    - namespace: "*"
-      server: "*"
-
-  clusterResourceWhitelist:
-    - group: "*"
-      kind: "*"
-
-  orphanedResources:
-    warn: false
----
 # Source: atomi-app-of-apps/templates/applications.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -88,7 +46,7 @@ metadata:
     app.kubernetes.io/managed-by: Helm
     tr8.io/bootstrap-type: agnostic
 spec:
-  project: bootstrap
+  project: default
   source:
     repoURL: https://github.com/AtomiCloud/helm.systems_kyverno
     targetRevision: HEAD

@@ -5,7 +5,7 @@ labels:
   layer: "1"
 
 revisionLimit: 3
-projectName: bootstrap
+projectName: default
 destination: pichu-main
 
 apps:
