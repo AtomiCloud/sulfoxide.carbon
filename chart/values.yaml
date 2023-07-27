@@ -6,7 +6,7 @@ labels:
 
 revisionLimit: 3
 projectName: default
-destination: pichu-main
+destination: https://d1943bf9-8108-45d0-a666-9782e2e848c7.vultr-k8s.com:6443
 
 apps:
   kyverno:

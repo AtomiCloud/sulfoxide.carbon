@@ -61,7 +61,7 @@ spec:
       ignoreMissingValueFiles: false
       skipCrds: false
   destination:
-    server: pichu-main
+    server: https://d1943bf9-8108-45d0-a666-9782e2e848c7.vultr-k8s.com:6443
     namespace: policy-engine
   ignoreDifferences:
     - kind: "Secret"
