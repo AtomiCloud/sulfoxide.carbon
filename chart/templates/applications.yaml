@@ -1,0 +1,56 @@
+{{- range $k, $v := .Values.apps }}
+{{- if $v.deploy }}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ $.Release.Name }}-{{ $k }}
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  annotations:
+    {{- include "atomi-app-of-apps.annotations" $ | nindent 4 }}
+    argocd.argoproj.io/sync-wave: "{{ $v.sync }}"
+  labels:
+    {{- include "atomi-app-of-apps.labels" $ | nindent 4 }}
+    tr8.io/bootstrap-type: agnostic
+spec:
+  project: {{ $.Values.projectName }}
+  source:
+    repoURL: {{ $v.repo }}
+    targetRevision: {{ $v.version }}
+    path: {{ $v.path }}
+    helm:
+      passCredentials: false
+      parameters: []
+      releaseName: {{ $v.release }}
+      valueFiles:
+        {{- toYaml $v.values | nindent 8 }}
+      ignoreMissingValueFiles: false
+      skipCrds: false
+  destination:
+    server: {{ $.Values.destination }}
+    namespace: {{ $v.namespace }}
+  ignoreDifferences:
+    - kind: "Secret"
+      jsonPointers:
+        - /data
+  # Sync policy
+  syncPolicy:
+    automated: # automated sync by default retries failed attempts 5 times with following delays between attempts ( 5s, 10s, 20s, 40s, 80s ); retry controlled using `retry` field.
+      prune: true # Specifies if resources should be pruned during auto-syncing ( false by default ).
+      selfHeal: true # Specifies if partial app sync should be executed when resources are changed only in target Kubernetes cluster and no git change detected ( false by default ).
+      allowEmpty: true # Allows deleting all application resources during automatic syncing ( false by default ).
+    syncOptions: # Sync options which modifies sync behavior
+      - CreateNamespace={{ $v.createNamespace }} # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.
+      - PrunePropagationPolicy=foreground # Supported policies are background, foreground and orphan.
+      - PruneLast=true # Allow the ability for resource pruning to happen as a final, implicit wave of a sync operation
+      - Replace=true # Because kubectl adds metadata that will cross the limit allowed by Kubernetes, Replace overcomes this limitation.
+    retry:
+      limit: 10
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m
+  revisionHistoryLimit: {{ $.Values.revisionLimit }}
+  {{- end }}
+---
+{{- end }}
