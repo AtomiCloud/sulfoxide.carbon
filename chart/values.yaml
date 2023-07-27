@@ -11,13 +11,13 @@ destination: https://kubernetes.default.svc
 apps:
   kyverno:
     sync: 0
-    deploy: false
+    deploy: true
     release: kyverno
-    repo: https://github.com/tr8team/helm.systems_kyverno
+    repo: https://github.com/AtomiCloud/helm.systems_kyverno
     version: HEAD
     path: "chart"
-    values: ["values.yaml", "values.admin.yaml"]
-    namespace: kyverno
+    values: ["values.yaml", "values.pichu.yaml"]
+    namespace: policy-engine
     createNamespace: true
 
   policies:
@@ -28,7 +28,7 @@ apps:
     version: HEAD
     path: "chart"
     values: ["values.yaml", "values.admin.yaml"]
-    namespace: kyverno
+    namespace: policy-engine
     createNamespace: true
 
   metricServer:
