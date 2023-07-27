@@ -6,7 +6,7 @@ labels:
 
 revisionLimit: 3
 projectName: bootstrap
-destination: https://kubernetes.default.svc
+destination: pichu-main
 
 apps:
   kyverno:

@@ -3,7 +3,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ $.Release.Name }}-{{ $k }}
+  name: {{ $.Values.labels.landscape }}-{{ $k }}
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   annotations:
