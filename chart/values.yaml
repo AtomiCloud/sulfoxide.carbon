@@ -11,7 +11,7 @@ destination: https://d1943bf9-8108-45d0-a666-9782e2e848c7.vultr-k8s.com:6443
 apps:
   kyverno:
     sync: 0
-    deploy: true
+    deploy: false
     release: kyverno
     repo: https://github.com/AtomiCloud/helm.systems_kyverno
     version: HEAD
