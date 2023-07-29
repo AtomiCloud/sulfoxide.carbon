@@ -1,0 +1,11 @@
+version: 3
+
+tasks:
+  default:
+    desc: Debug the helm chart
+    cmds:
+      - helm template $RELEASE_NAME ./chart --debug {{.CLI_ARGS}}
+  pichu:opal:
+    desc: Debug the helm chart
+    cmds:
+      - helm template $RELEASE_NAME ./chart --debug --values ./chart/values.yaml --values ./chart/values.pichu.opal.yaml {{.CLI_ARGS}}

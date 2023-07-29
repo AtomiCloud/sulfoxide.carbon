@@ -3,7 +3,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ $.Values.labels.landscape }}-{{ $.Values.labels.cluster}}-{{ $k }}
+  name: {{ $.Values.serviceTree.landscape }}-{{ $.Values.serviceTree.cluster}}-{{ $k }}
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   annotations:

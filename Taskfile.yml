@@ -5,7 +5,7 @@ env:
 
 includes:
   render: tasks/Taskfile.render.yaml
-
+  debug: tasks/Taskfile.debug.yaml
 tasks:
   # Utility
   start:cluster:
