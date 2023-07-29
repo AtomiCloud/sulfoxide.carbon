@@ -22,7 +22,7 @@ apps:
     version: HEAD
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
-  metricServer:
+  metric-server:
     deploy: true
     release: metric-server
     version: HEAD
@@ -34,7 +34,7 @@ apps:
     version: HEAD
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
-  certManager:
+  cert-manager:
     deploy: true
     release: cert-manager
     version: HEAD
@@ -58,7 +58,7 @@ apps:
     version: HEAD
     values: ["values.yaml", "values.admin.yaml"]
 
-  clusterIssuer:
+  cluster-issuer:
     deploy: false
     release: cluster-issuer
     version: HEAD
