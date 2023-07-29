@@ -17,7 +17,7 @@ apps:
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
   policies:
-    deploy: true
+    deploy: false
     release: kyverno-policies
     version: HEAD
     values: ["values.yaml", "values.pichu.opal.yaml"]

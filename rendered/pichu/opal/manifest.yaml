@@ -16,6 +16,10 @@
 
 ---
 # Source: atomi-app-of-apps/templates/applications.yaml
+---
+
+---
+# Source: atomi-app-of-apps/templates/applications.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -51,74 +55,6 @@ spec:
       passCredentials: false
       parameters: []
       releaseName: pichu-opal-kyverno
-      valueFiles:
-        - values.yaml
-        - values.pichu.opal.yaml
-      ignoreMissingValueFiles: false
-      skipCrds: false
-  destination:
-    server: https://d1943bf9-8108-45d0-a666-9782e2e848c7.vultr-k8s.com:6443
-    namespace: policy-engine
-  ignoreDifferences:
-    - kind: "Secret"
-      jsonPointers:
-        - /data
-  # Sync policy
-  syncPolicy:
-    automated: # automated sync by default retries failed attempts 5 times with following delays between attempts ( 5s, 10s, 20s, 40s, 80s ); retry controlled using `retry` field.
-      prune: true # Specifies if resources should be pruned during auto-syncing ( false by default ).
-      selfHeal: true # Specifies if partial app sync should be executed when resources are changed only in target Kubernetes cluster and no git change detected ( false by default ).
-      allowEmpty: true # Allows deleting all application resources during automatic syncing ( false by default ).
-    syncOptions: # Sync options which modifies sync behavior
-      - CreateNamespace=true # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.
-      - PrunePropagationPolicy=foreground # Supported policies are background, foreground and orphan.
-      - PruneLast=true # Allow the ability for resource pruning to happen as a final, implicit wave of a sync operation
-      - Replace=true # Because kubectl adds metadata that will cross the limit allowed by Kubernetes, Replace overcomes this limitation.
-    retry:
-      limit: 10
-      backoff:
-        duration: 5s
-        factor: 2
-        maxDuration: 3m
-  revisionHistoryLimit: 3
----
-# Source: atomi-app-of-apps/templates/applications.yaml
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: pichu-opal-policies
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-  annotations:
-    "atomi.cloud/cluster": "opal"
-    "atomi.cloud/landscape": "pichu"
-    "atomi.cloud/layer": "1"
-    "atomi.cloud/platform": "systems"
-    "atomi.cloud/service": "bootstrap"
-    argocd.argoproj.io/sync-wave: "1"
-  labels:
-    helm.sh/chart: atomi-app-of-apps-1.0.0
-    app.kubernetes.io/name: atomi-app-of-apps
-    app.kubernetes.io/instance: app-of-apps
-    "atomi.cloud/cluster": "opal"
-    "atomi.cloud/landscape": "pichu"
-    "atomi.cloud/layer": "1"
-    "atomi.cloud/platform": "systems"
-    "atomi.cloud/service": "bootstrap"
-    app.kubernetes.io/version: "0.1.0"
-    app.kubernetes.io/managed-by: Helm
-    atomi.cloud/bootstrap-type: agnostic
-spec:
-  project: default
-  source:
-    repoURL: https://github.com/AtomiCloud/helm.systems_kyverno-policies
-    targetRevision: HEAD
-    path: chart
-    helm:
-      passCredentials: false
-      parameters: []
-      releaseName: kyverno-policies
       valueFiles:
         - values.yaml
         - values.pichu.opal.yaml
