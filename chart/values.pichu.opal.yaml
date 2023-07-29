@@ -23,28 +23,28 @@ apps:
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
   metricServer:
-    deploy: false
+    deploy: true
     release: metric-server
     version: HEAD
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml", "values.pichu.opal.yaml"]
 
   reloader:
-    deploy: false
+    deploy: true
     release: reloader
     version: HEAD
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml", "values.pichu.opal.yaml"]
 
   certManager:
-    deploy: false
+    deploy: true
     release: cert-manager
     version: HEAD
-    values: ["values.yaml"]
+    values: ["values.yaml", "values.pichu.opal.yaml"]
 
   otel:
-    deploy: false
+    deploy: true
     release: otel
     version: HEAD
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml", "values.pichu.opal.yaml"]
 
   cloudflared:
     deploy: false
