@@ -3,7 +3,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ $.Values.labels.landscape }}-{{ $k }}
+  name: {{ $.Values.labels.landscape }}-{{ $.Values.labels.cluster}}-{{ $k }}
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   annotations:
@@ -11,7 +11,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "{{ $v.sync }}"
   labels:
     {{- include "atomi-app-of-apps.labels" $ | nindent 4 }}
-    tr8.io/bootstrap-type: agnostic
+    atomi.cloud/bootstrap-type: agnostic
 spec:
   project: {{ $.Values.projectName }}
   source:

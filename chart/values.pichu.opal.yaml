@@ -1,0 +1,77 @@
+labels:
+  landscape: pichu
+  cluster: opal
+  platform: systems
+  service: bootstrap
+  layer: "1"
+
+revisionLimit: 3
+projectName: default
+destination: https://d1943bf9-8108-45d0-a666-9782e2e848c7.vultr-k8s.com:6443
+
+apps:
+  kyverno:
+    deploy: true
+    release: pichu-opal-kyverno
+    version: HEAD
+    values: ["values.yaml", "values.pichu.opal.yaml"]
+
+  policies:
+    deploy: false
+    release: kyverno-policies
+    version: HEAD
+    values: ["values.yaml", "values.admin.yaml"]
+
+  metricServer:
+    deploy: false
+    release: metric-server
+    version: HEAD
+    values: ["values.yaml", "values.admin.yaml"]
+
+  reloader:
+    deploy: false
+    release: reloader
+    version: HEAD
+    values: ["values.yaml", "values.admin.yaml"]
+
+  certManager:
+    deploy: false
+    release: cert-manager
+    version: HEAD
+    values: ["values.yaml"]
+
+  otel:
+    deploy: false
+    release: otel
+    version: HEAD
+    values: ["values.yaml", "values.admin.yaml"]
+
+  cloudflared:
+    deploy: false
+    release: cloudflared
+    version: HEAD
+    values: ["values.yaml", "values.admin.yaml"]
+
+  keda:
+    deploy: false
+    release: keda
+    version: HEAD
+    values: ["values.yaml", "values.admin.yaml"]
+
+  clusterIssuer:
+    deploy: false
+    release: cluster-issuer
+    version: HEAD
+    values: ["values.yaml", "values.admin.yaml"]
+
+  otel-collectors:
+    deploy: false
+    release: otel-collectors
+    version: HEAD
+    values: ["values.yaml", "values.admin.yaml"]
+
+  kong:
+    deploy: false
+    release: kong
+    version: HEAD
+    values: ["values.yaml", "values.admin.yaml"]

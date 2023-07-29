@@ -3,6 +3,9 @@ version: "3"
 env:
   RELEASE_NAME: app-of-apps
 
+includes:
+  render: tasks/Taskfile.render.yaml
+
 tasks:
   # Utility
   start:cluster:

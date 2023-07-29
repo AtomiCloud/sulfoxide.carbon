@@ -1,0 +1,17 @@
+version: 3
+
+tasks:
+  template:
+    internal: true
+    desc: Renders the chart
+    cmds:
+      - >-
+        helm template $RELEASE_NAME ./chart --values ./chart/values.{{.LANDSCAPE}}.{{.CLUSTER}}.yaml 
+        {{.CLI_ARGS}} > rendered/{{.LANDSCAPE}}/{{.CLUSTER}}/manifest.yaml
+  pichu:opal:
+    desc: Renders the chart
+    cmds:
+      - task: template
+        vars:
+          LANDSCAPE: pichu
+          CLUSTER: opal

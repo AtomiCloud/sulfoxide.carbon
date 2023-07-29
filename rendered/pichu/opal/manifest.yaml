@@ -23,10 +23,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: pichu-kyverno
+  name: pichu-opal-kyverno
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   annotations:
+    "atomi.cloud/cluster": "opal"
     "atomi.cloud/landscape": "pichu"
     "atomi.cloud/layer": "1"
     "atomi.cloud/platform": "systems"
@@ -38,13 +39,14 @@ metadata:
     helm.sh/chart: atomi-app-of-apps-1.0.0
     app.kubernetes.io/name: atomi-app-of-apps
     app.kubernetes.io/instance: app-of-apps
+    "atomi.cloud/cluster": "opal"
     "atomi.cloud/landscape": "pichu"
     "atomi.cloud/layer": "1"
     "atomi.cloud/platform": "systems"
     "atomi.cloud/service": "bootstrap"
     app.kubernetes.io/version: "0.1.0"
     app.kubernetes.io/managed-by: Helm
-    tr8.io/bootstrap-type: agnostic
+    atomi.cloud/bootstrap-type: agnostic
 spec:
   project: default
   source:
@@ -54,10 +56,10 @@ spec:
     helm:
       passCredentials: false
       parameters: []
-      releaseName: kyverno
+      releaseName: pichu-opal-kyverno
       valueFiles:
         - values.yaml
-        - values.pichu.yaml
+        - values.pichu.opal.yaml
       ignoreMissingValueFiles: false
       skipCrds: false
   destination:

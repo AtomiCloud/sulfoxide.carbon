@@ -12,7 +12,7 @@ apps:
   kyverno:
     sync: 0
     deploy: true
-    release: kyverno
+    release: pichu-kyverno
     repo: https://github.com/AtomiCloud/helm.systems_kyverno
     version: HEAD
     path: "chart"
