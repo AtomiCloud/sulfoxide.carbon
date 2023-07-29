@@ -1,4 +1,4 @@
-labels:
+serviceTree:
   landscape: pichu
   platform: systems
   service: bootstrap
@@ -24,10 +24,10 @@ apps:
     sync: 1
     deploy: false
     release: kyverno-policies
-    repo: https://github.com/tr8team/helm.systems_kyverno-policies
+    repo: https://github.com/AtomiCloud/helm.systems_kyverno-policies
     version: HEAD
     path: "chart"
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml"]
     namespace: policy-engine
     createNamespace: true
 
@@ -38,7 +38,7 @@ apps:
     repo: https://github.com/tr8team/helm.systems_metrics-server
     version: HEAD
     path: "chart"
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml"]
     namespace: kube-system
     createNamespace: true
 
@@ -49,7 +49,7 @@ apps:
     repo: https://github.com/tr8team/helm.systems_reloader
     version: HEAD
     path: "chart"
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml"]
     namespace: reloader
     createNamespace: true
 
@@ -71,7 +71,7 @@ apps:
     repo: https://github.com/tr8team/helm.systems_otel
     version: HEAD
     path: chart
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml"]
     namespace: otel
     createNamespace: true
 
@@ -82,7 +82,7 @@ apps:
     repo: https://github.com/tr8team/helm.systems_cloudflared
     version: HEAD
     path: chart
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml"]
     namespace: internal-ingress
     createNamespace: true
 
@@ -93,7 +93,7 @@ apps:
     repo: https://github.com/tr8team/helm.systems_keda
     version: HEAD
     path: "chart"
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml"]
     namespace: keda
     createNamespace: true
 
@@ -104,7 +104,7 @@ apps:
     repo: https://github.com/tr8team/helm.systems_cluster-issuer
     version: HEAD
     path: chart
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml"]
     namespace: cert-manager
     createNamespace: false
 
@@ -115,7 +115,7 @@ apps:
     repo: https://github.com/tr8team/helm.systems_otel
     version: HEAD
     path: chart
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml"]
     namespace: otel
     createNamespace: false
 
@@ -126,6 +126,6 @@ apps:
     repo: https://github.com/tr8team/helm.systems_kong-ingress
     version: HEAD
     path: chart
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml"]
     namespace: external-ingress
     createNamespace: true

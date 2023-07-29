@@ -1,4 +1,4 @@
-labels:
+serviceTree:
   landscape: pichu
   cluster: opal
   platform: systems
@@ -17,10 +17,10 @@ apps:
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
   policies:
-    deploy: false
+    deploy: true
     release: kyverno-policies
     version: HEAD
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml", "values.pichu.opal.yaml"]
 
   metricServer:
     deploy: false

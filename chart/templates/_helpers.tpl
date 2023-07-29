@@ -36,7 +36,7 @@ Common labels
 {{- define "atomi-app-of-apps.labels" -}}
 helm.sh/chart: {{ include "atomi-app-of-apps.chart" . }}
 {{ include "atomi-app-of-apps.selectorLabels" . }}
-{{- range $k, $v := .Values.labels }}
+{{- range $k, $v := .Values.serviceTree }}
 "atomi.cloud/{{ $k }}": "{{ $v }}"
 {{- end }}
 {{- if .Chart.AppVersion }}
@@ -49,13 +49,8 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 Common annotations
 */}}
 {{- define "atomi-app-of-apps.annotations" -}}
-{{- range $k, $v := .Values.labels }}
+{{- range $k, $v := .Values.serviceTree }}
 "atomi.cloud/{{ $k }}": "{{ $v }}"
-{{- end }}
-{{- if .Chart.AppVersion }}
-app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
-{{- end }}
-app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
 
 {{/*
