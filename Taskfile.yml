@@ -4,8 +4,11 @@ env:
   RELEASE_NAME: app-of-apps
 
 includes:
-  render: tasks/Taskfile.render.yaml
-  debug: tasks/Taskfile.debug.yaml
+  pichu:opal:
+    taskfile: tasks/Taskfile.cluster.yaml
+    vars:
+      LANDSCAPE: pichu
+      CLUSTER: opal
 tasks:
   # Utility
   start:cluster:

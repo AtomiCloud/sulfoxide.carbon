@@ -1,0 +1,13 @@
+version: "3"
+
+tasks:
+  debug:
+    desc: Debug the helm chart
+    cmds:
+      - helm template $RELEASE_NAME ./chart --debug --values ./chart/values.yaml --values ./chart/values.{{.LANDSCAPE}}.{{.CLUSTER}}.yaml {{.CLI_ARGS}}
+  render:
+    desc: Render the helm chart
+    cmds:
+      - >-
+        helm template $RELEASE_NAME ./chart --values ./chart/values.{{.LANDSCAPE}}.{{.CLUSTER}}.yaml 
+        {{.CLI_ARGS}} > rendered/{{.LANDSCAPE}}/{{.CLUSTER}}/manifest.yaml
