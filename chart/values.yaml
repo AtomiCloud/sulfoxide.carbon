@@ -35,7 +35,7 @@ apps:
     sync: 2
     deploy: false
     release: metric-server
-    repo: https://github.com/tr8team/helm.systems_metrics-server
+    repo: https://github.com/AtomiCloud/helm.systems_metric-server
     version: HEAD
     path: "chart"
     values: ["values.yaml"]
@@ -46,7 +46,7 @@ apps:
     sync: 2
     deploy: false
     release: reloader
-    repo: https://github.com/tr8team/helm.systems_reloader
+    repo: https://github.com/AtomiCloud/helm.systems_reloader
     version: HEAD
     path: "chart"
     values: ["values.yaml"]
@@ -57,7 +57,7 @@ apps:
     sync: 2
     deploy: false
     release: cert-manager
-    repo: https://github.com/tr8team/helm.systems_cert-manager
+    repo: https://github.com/AtomiCloud/helm.systems_cert-manager
     version: HEAD
     path: "chart"
     values: ["values.yaml"]
@@ -68,7 +68,7 @@ apps:
     sync: 2
     deploy: false
     release: otel
-    repo: https://github.com/tr8team/helm.systems_otel
+    repo: https://github.com/AtomiCloud/helm.systems_otel-operator
     version: HEAD
     path: chart
     values: ["values.yaml"]
@@ -79,7 +79,7 @@ apps:
     sync: 2
     deploy: false
     release: cloudflared
-    repo: https://github.com/tr8team/helm.systems_cloudflared
+    repo: https://github.com/AtomiCloud/helm.systems_cloudflared
     version: HEAD
     path: chart
     values: ["values.yaml"]
@@ -90,7 +90,7 @@ apps:
     sync: 3
     deploy: false
     release: keda
-    repo: https://github.com/tr8team/helm.systems_keda
+    repo: https://github.com/AtomiCloud/helm.systems_keda
     version: HEAD
     path: "chart"
     values: ["values.yaml"]
@@ -101,7 +101,7 @@ apps:
     sync: 3
     deploy: false
     release: cluster-issuer
-    repo: https://github.com/tr8team/helm.systems_cluster-issuer
+    repo: https://github.com/AtomiCloud/helm.systems_cluster-issuer
     version: HEAD
     path: chart
     values: ["values.yaml"]
@@ -112,7 +112,7 @@ apps:
     sync: 3
     deploy: false
     release: otel-collectors
-    repo: https://github.com/tr8team/helm.systems_otel
+    repo: https://github.com/AtomiCloud/helm.systems_otel-collectors
     version: HEAD
     path: chart
     values: ["values.yaml"]
@@ -123,7 +123,7 @@ apps:
     sync: 4
     deploy: false
     release: kong
-    repo: https://github.com/tr8team/helm.systems_kong-ingress
+    repo: https://github.com/AtomiCloud/helm.systems_kong-ingress
     version: HEAD
     path: chart
     values: ["values.yaml"]
