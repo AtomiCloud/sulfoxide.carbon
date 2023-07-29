@@ -9,6 +9,7 @@ includes:
     vars:
       LANDSCAPE: pichu
       CLUSTER: opal
+
 tasks:
   # Utility
   start:cluster:
@@ -22,38 +23,8 @@ tasks:
       - ./scripts/local/delete-k3d-cluster.sh
 
   # Helm Operations
-  add:helm:repo:
-    desc: Add Helm dependency repositories
-    dir: chart
-    cmds:
-      - yq --indent 0 '.dependencies | map(["helm", "repo", "add", .name, .repository] | join(" ")) | .[]' "Chart.lock" | sh --
-
   update:
     desc: Update Helm dependencies
     dir: chart
     cmds:
       - helm dependency update
-
-  deps:
-    desc: Install Helm dependencies
-    dir: chart
-    cmds:
-      - task: add:helm:repo
-      - helm dependency build
-
-  debug:
-    desc: Debug the helm chart
-    cmds:
-      - task: deps
-      - helm template $RELEASE_NAME ./chart --debug {{.CLI_ARGS}}
-
-  install:
-    desc: Installs the chart
-    cmds:
-      - task: deps
-      - helm upgrade --install $RELEASE_NAME ./chart {{.CLI_ARGS}}
-
-  remove:
-    desc: Removes an installed release
-    cmds:
-      - helm uninstall $RELEASE_NAME
