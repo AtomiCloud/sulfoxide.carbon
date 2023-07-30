@@ -47,22 +47,22 @@ apps:
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
   cloudflared:
-    deploy: false
+    deploy: true
     release: cloudflared
     version: HEAD
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml", "values.pichu.opal.yaml"]
 
   keda:
-    deploy: false
+    deploy: true
     release: keda
     version: HEAD
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml", "values.pichu.opal.yaml"]
 
   cluster-issuer:
-    deploy: false
+    deploy: true
     release: cluster-issuer
     version: HEAD
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml", "values.pichu.opal.yaml"]
 
   otel-collectors:
     deploy: false
@@ -71,7 +71,7 @@ apps:
     values: ["values.yaml", "values.admin.yaml"]
 
   kong:
-    deploy: false
+    deploy: true
     release: kong
     version: HEAD
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml", "values.pichu.opal.yaml"]
