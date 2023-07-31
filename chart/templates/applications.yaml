@@ -29,7 +29,7 @@ spec:
       valueFiles:
         {{- toYaml $v.values | nindent 8 }}
     {{- if $v.chart }}
-      chart: {{ $v.chart }}
+    chart: {{ $v.chart }}
     {{- end }}
   destination:
     server: {{ $.Values.destination }}
