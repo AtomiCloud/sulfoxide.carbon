@@ -11,67 +11,67 @@ destination: https://e31a3b7c-4ef1-48c5-a0b6-9dc32d781c3d.vultr-k8s.com:6443
 
 apps:
   kyverno:
-    deploy: false
+    deploy: true
     release: pichu-opal-kyverno
     version: HEAD
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
   policies:
-    deploy: false
+    deploy: true
     release: kyverno-policies
     version: HEAD
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
   metric-server:
-    deploy: false
+    deploy: true
     release: metric-server
     version: HEAD
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
   reloader:
-    deploy: false
+    deploy: true
     release: reloader
     version: HEAD
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
   cert-manager:
-    deploy: false
+    deploy: true
     release: cert-manager
     version: HEAD
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
   otel:
-    deploy: false
+    deploy: true
     release: otel
     version: HEAD
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
   cloudflared:
-    deploy: false
+    deploy: true
     release: cloudflared
     version: HEAD
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
   keda:
-    deploy: false
+    deploy: true
     release: keda
     version: HEAD
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
   cluster-issuer:
-    deploy: false
+    deploy: true
     release: cluster-issuer
     version: HEAD
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
   otel-collectors:
-    deploy: false
+    deploy: true
     release: otel-collectors
     version: HEAD
     values: ["values.yaml", "values.admin.yaml"]
 
   kong:
-    deploy: false
+    deploy: true
     release: kong
     version: HEAD
     values: ["values.yaml", "values.pichu.opal.yaml"]
