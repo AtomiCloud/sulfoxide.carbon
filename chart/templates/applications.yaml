@@ -38,8 +38,9 @@ spec:
     syncOptions: # Sync options which modifies sync behavior
       - CreateNamespace={{ $v.createNamespace }} # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.
       - PrunePropagationPolicy=foreground # Supported policies are background, foreground and orphan.
-      - PruneLast=true # Allow the ability for resource pruning to happen as a final, implicit wave of a sync operation
-      - Replace=false # Because kubectl adds metadata that will cross the limit allowed by Kubernetes, Replace overcomes this limitation.
+      - PruneLast={{ $v.pruneLast }} # Allow the ability for resource pruning to happen as a final, implicit wave of a sync operation
+      - Replace={{ $v.replace }} # Because kubectl adds metadata that will cross the limit allowed by Kubernetes, Replace overcomes this limitation.
+      - ServerSideApply={{ $v.serverSideApply }}
     retry:
       limit: 10
       backoff:

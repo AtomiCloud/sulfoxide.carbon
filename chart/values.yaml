@@ -19,6 +19,9 @@ apps:
     values: ["values.yaml", "values.pichu.yaml"]
     namespace: policy-engine
     createNamespace: true
+    pruneLast: true
+    replace: false
+    serverSideApply: true
 
   policies:
     sync: 1
@@ -30,6 +33,9 @@ apps:
     values: ["values.yaml"]
     namespace: policy-engine
     createNamespace: true
+    pruneLast: true
+    replace: false
+    serverSideApply: false
 
   metric-server:
     sync: 2
@@ -41,7 +47,9 @@ apps:
     values: ["values.yaml"]
     namespace: kube-system
     createNamespace: true
-
+    pruneLast: true
+    replace: false
+    serverSideApply: false
   reloader:
     sync: 2
     deploy: false
@@ -52,7 +60,9 @@ apps:
     values: ["values.yaml"]
     namespace: reloader
     createNamespace: true
-
+    pruneLast: true
+    replace: false
+    serverSideApply: false
   cert-manager:
     sync: 2
     deploy: false
@@ -63,7 +73,9 @@ apps:
     values: ["values.yaml"]
     namespace: cert-manager
     createNamespace: true
-
+    pruneLast: true
+    replace: false
+    serverSideApply: false
   otel:
     sync: 2
     deploy: false
@@ -74,7 +86,9 @@ apps:
     values: ["values.yaml"]
     namespace: otel
     createNamespace: true
-
+    pruneLast: true
+    replace: false
+    serverSideApply: false
   cloudflared:
     sync: 2
     deploy: false
@@ -85,7 +99,9 @@ apps:
     values: ["values.yaml"]
     namespace: internal-ingress
     createNamespace: true
-
+    pruneLast: true
+    replace: false
+    serverSideApply: false
   keda:
     sync: 3
     deploy: false
@@ -96,7 +112,9 @@ apps:
     values: ["values.yaml"]
     namespace: keda
     createNamespace: true
-
+    pruneLast: true
+    replace: false
+    serverSideApply: false
   cluster-issuer:
     sync: 3
     deploy: false
@@ -107,7 +125,9 @@ apps:
     values: ["values.yaml"]
     namespace: cert-manager
     createNamespace: false
-
+    pruneLast: true
+    replace: false
+    serverSideApply: false
   otel-collectors:
     sync: 3
     deploy: false
@@ -118,7 +138,9 @@ apps:
     values: ["values.yaml"]
     namespace: otel
     createNamespace: false
-
+    pruneLast: true
+    replace: false
+    serverSideApply: false
   kong:
     sync: 4
     deploy: false
@@ -129,3 +151,6 @@ apps:
     values: ["values.yaml"]
     namespace: external-ingress
     createNamespace: true
+    pruneLast: true
+    replace: false
+    serverSideApply: false
