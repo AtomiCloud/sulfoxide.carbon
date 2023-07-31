@@ -10,6 +10,12 @@ projectName: bootstrap
 destination: https://e31a3b7c-4ef1-48c5-a0b6-9dc32d781c3d.vultr-k8s.com:6443
 
 apps:
+  prometheus:
+    deploy: true
+    release: prometheus-crds
+    version: 5.0.0
+    values: [ "values.yaml" ]
+
   kyverno:
     deploy: true
     release: pichu-opal-kyverno

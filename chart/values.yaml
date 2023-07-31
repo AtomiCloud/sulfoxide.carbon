@@ -9,8 +9,23 @@ projectName: default
 destination: https://d1943bf9-8108-45d0-a666-9782e2e848c7.vultr-k8s.com:6443
 
 apps:
-  kyverno:
+  prometheus:
     sync: 0
+    deploy: true
+    release: prometheus-crds
+    repo: https://prometheus-community.github.io/helm-charts
+    version: 5.0.0
+    values: [ "values.yaml" ]
+    namespace: default
+    createNamespace: false
+    pruneLast: true
+    replace: false
+    serverSideApply: false
+    chart: prometheus-operator-crds
+    path: ""
+
+  kyverno:
+    sync: 1
     deploy: true
     release: pichu-kyverno
     repo: https://github.com/AtomiCloud/helm.systems_kyverno
@@ -24,7 +39,7 @@ apps:
     serverSideApply: true
 
   policies:
-    sync: 1
+    sync: 2
     deploy: false
     release: kyverno-policies
     repo: https://github.com/AtomiCloud/helm.systems_kyverno-policies
@@ -38,7 +53,7 @@ apps:
     serverSideApply: false
 
   metric-server:
-    sync: 2
+    sync: 3
     deploy: false
     release: metric-server
     repo: https://github.com/AtomiCloud/helm.systems_metric-server
@@ -51,7 +66,7 @@ apps:
     replace: false
     serverSideApply: false
   reloader:
-    sync: 2
+    sync: 3
     deploy: false
     release: reloader
     repo: https://github.com/AtomiCloud/helm.systems_reloader
@@ -63,8 +78,9 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+
   cert-manager:
-    sync: 2
+    sync: 3
     deploy: false
     release: cert-manager
     repo: https://github.com/AtomiCloud/helm.systems_cert-manager
@@ -76,8 +92,9 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+
   otel:
-    sync: 2
+    sync: 3
     deploy: false
     release: otel
     repo: https://github.com/AtomiCloud/helm.systems_otel-operator
@@ -89,8 +106,9 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+
   cloudflared:
-    sync: 2
+    sync: 3
     deploy: false
     release: cloudflared
     repo: https://github.com/AtomiCloud/helm.systems_cloudflared
@@ -102,8 +120,9 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+
   keda:
-    sync: 3
+    sync: 4
     deploy: false
     release: keda
     repo: https://github.com/AtomiCloud/helm.systems_keda
@@ -115,8 +134,9 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+
   cluster-issuer:
-    sync: 3
+    sync: 4
     deploy: false
     release: cluster-issuer
     repo: https://github.com/AtomiCloud/helm.systems_cluster-issuer
@@ -128,8 +148,9 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+
   otel-collectors:
-    sync: 3
+    sync: 4
     deploy: false
     release: otel-collectors
     repo: https://github.com/AtomiCloud/helm.systems_otel-collectors
@@ -141,8 +162,9 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+
   kong:
-    sync: 4
+    sync: 5
     deploy: false
     release: kong
     repo: https://github.com/AtomiCloud/helm.systems_kong-ingress
