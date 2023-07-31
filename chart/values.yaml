@@ -22,7 +22,6 @@ apps:
     replace: false
     serverSideApply: false
     chart: prometheus-operator-crds
-    path: ""
 
   kyverno:
     sync: 1

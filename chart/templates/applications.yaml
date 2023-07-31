@@ -17,7 +17,9 @@ spec:
   source:
     repoURL: {{ $v.repo }}
     targetRevision: {{ $v.version }}
+    {{- if $v.path }}
     path: {{ $v.path }}
+    {{- end }}
     helm:
       ignoreMissingValueFiles: false
       parameters: []
