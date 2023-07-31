@@ -20,7 +20,7 @@ apps:
     createNamespace: false
     pruneLast: true
     replace: false
-    serverSideApply: false
+    serverSideApply: true
     chart: prometheus-operator-crds
 
   kyverno:
