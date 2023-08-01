@@ -71,7 +71,7 @@ apps:
     values: ["values.yaml", "values.pichu.opal.yaml"]
 
   otel-collectors:
-    deploy: true
+    deploy: false
     release: otel-collectors
     version: HEAD
     values: ["values.yaml", "values.pichu.opal.yaml"]
