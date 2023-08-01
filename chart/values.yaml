@@ -132,7 +132,7 @@ apps:
     createNamespace: true
     pruneLast: true
     replace: false
-    serverSideApply: false
+    serverSideApply: true
 
   cluster-issuer:
     sync: 4
