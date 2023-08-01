@@ -74,7 +74,7 @@ apps:
     deploy: true
     release: otel-collectors
     version: HEAD
-    values: ["values.yaml", "values.admin.yaml"]
+    values: ["values.yaml", "values.pichu.opal.yaml"]
 
   kong:
     deploy: true
