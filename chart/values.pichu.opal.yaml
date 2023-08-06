@@ -7,7 +7,7 @@ serviceTree:
 
 revisionLimit: 3
 projectName: bootstrap
-destination: https://e31a3b7c-4ef1-48c5-a0b6-9dc32d781c3d.vultr-k8s.com:6443
+destination: https://b42a689b-73cf-4d73-ba8d-47f706754e83.k8s.ondigitalocean.com
 
 apps:
   prometheus:
