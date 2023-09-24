@@ -15,8 +15,8 @@ with packages;
   ];
 
   infra = [
-    kube3d
-    kubernetes-helm
+    k3d
+    helm
     kubectl
   ];
 
@@ -26,5 +26,8 @@ with packages;
   lint = [
     # core
     treefmt
+
+    gitlint
+    shellcheck
   ];
 }

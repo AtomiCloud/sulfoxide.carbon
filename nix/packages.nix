@@ -1,4 +1,4 @@
-{ pkgs, atomi, pkgs-jul-13-23 }:
+{ pkgs, atomi, atomi_classic, pkgs-sep-24-23 }:
 let
 
   all = {
@@ -6,11 +6,19 @@ let
       with atomi;
       {
         inherit
+          infisical
           pls;
       }
     );
-    jul-13-23 = (
-      with pkgs-jul-13-23;
+    atomipkgs_classic = (
+      with atomi_classic;
+      {
+        inherit
+          sg;
+      }
+    );
+    sep-24-23 = (
+      with pkgs-sep-24-23;
       {
         inherit
           coreutils
@@ -24,14 +32,18 @@ let
           treefmt
 
           # infra
-          kube3d
-          kubernetes-helm
+          k3d
           helm-docs
-          kubectl;
+          kubectl
+          gitlint
+          shellcheck
+          ;
+        helm = kubernetes-helm;
       }
     );
   };
 in
 with all;
 atomipkgs //
-jul-13-23
+atomipkgs_classic //
+sep-24-23

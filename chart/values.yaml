@@ -64,6 +64,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+
   reloader:
     sync: 3
     deploy: false

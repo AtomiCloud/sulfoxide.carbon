@@ -1,11 +1,18 @@
 #!/usr/bin/env bash
 
-input="$1"
+dev_config="$1"
 
 set -eou pipefail
 
-clusterName="playground"
-[ "$input" = '' ] && input="$clusterName"
+[ "$dev_config" = '' ] && dev_config="./config/dev.yaml"
+
+# check if dev config exists
+if [ ! -f "$dev_config" ]; then
+  echo "❌ Dev config '$dev_config' does not exist!"
+  exit 1
+fi
+
+input="$(yq '.landscape' "$dev_config")"
 
 echo "🛠️ Attempting to delete cluster '$input'..."
 
@@ -21,7 +28,7 @@ fi
 echo "🧹 Cleaning up kubeconfig files..."
 mkdir -p "$HOME/.kube/configs"
 mkdir -p "$HOME/.kube/k3dconfigs"
-rm "$HOME/.kube/k3dconfigs/k3d-$clusterName" || true
+rm "$HOME/.kube/k3dconfigs/k3d-$input" || true
 KUBECONFIG=$(cd ~/.kube/configs && find "$(pwd)"/* | awk 'ORS=":"')$(cd ~/.kube/k3dconfigs && find "$(pwd)"/* | awk 'ORS=":"') kubectl config view --flatten >~/.kube/config
 chmod 600 ~/.kube/config
 echo "✅ Config is cleared!"
