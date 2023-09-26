@@ -1,9 +1,6 @@
 apiVersion: v2
 name: atomi-app-of-apps
 description: AtomiCloud Cluster Bootstrap Engine
-
 type: application
-
 version: 1.0.0
-
 appVersion: "0.1.0"
