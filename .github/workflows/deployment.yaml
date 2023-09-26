@@ -25,6 +25,7 @@ jobs:
       - uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - uses: rlespinasse/github-slug-action@v3.x
-
       - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: nix develop .#releaser -c scripts/ci/release.sh
