@@ -28,6 +28,8 @@ let
           jq
           yq-go
 
+          nodejs_20
+
           # lint
           treefmt
 
@@ -39,6 +41,7 @@ let
           shellcheck
           ;
         helm = kubernetes-helm;
+
       }
     );
   };

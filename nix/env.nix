@@ -27,7 +27,14 @@ with packages;
     # core
     treefmt
 
+    helm-docs
+
     gitlint
     shellcheck
+  ];
+
+  releaser = [
+    nodejs_20
+    sg
   ];
 }
