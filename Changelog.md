@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.0.1...v1.0.2) (2023-09-27)
+
+
+### 🐛 Bug Fixes
+
+* incorrect k3d configuration ([dd73e80](https://github.com/AtomiCloud/sulfoxide.carbon/commit/dd73e801803b718dfb7c2ab04af5282e460e5598))
+
 ## [1.0.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.0.0...v1.0.1) (2023-09-27)
 
 
