@@ -1,3 +1,15 @@
+## [1.0.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.0.0...v1.0.1) (2023-09-27)
+
+
+### 📝 Documentation Updates
+
+* update README to include contributing ([50b2698](https://github.com/AtomiCloud/sulfoxide.carbon/commit/50b2698a382e22f90656c7b640e4284c5fe600ee))
+
+
+### 🐛 Bug Fixes
+
+* pre-commit failing due to not ignoring generated files ([b5e9e0f](https://github.com/AtomiCloud/sulfoxide.carbon/commit/b5e9e0f7293eca7099d2fdc160af391e345dbe8c))
+
 ## 1.0.0 (2023-09-26)
 
 
