@@ -7,7 +7,7 @@ pre-commit-lib.run {
     # formatter
     treefmt = {
       enable = true;
-      excludes = [ "chart/.*(yaml|yml)" "chart/README.md" ];
+      excludes = [ "chart/.*(yaml|yml)" "chart/README.md" "Changelog.md" "docs/developer/CommitConventions.md" ];
     };
 
     # linters From https://github.com/cachix/pre-commit-hooks.nix
