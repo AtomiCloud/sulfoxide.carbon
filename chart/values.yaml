@@ -21,7 +21,7 @@ apps:
     namespace: default
     createNamespace: false
     pruneLast: true
-    replace: false
+    replace: true
     serverSideApply: true
     chart: prometheus-operator-crds
 
