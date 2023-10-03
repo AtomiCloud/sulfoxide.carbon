@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.1.2...v1.1.3) (2023-10-03)
+
+
+### 🐛 Bug Fixes
+
+* prometheus replace ([4a64021](https://github.com/AtomiCloud/sulfoxide.carbon/commit/4a6402139f3a8f102106ae75ee1ea75a202b3433))
+
 ## [1.1.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.1.1...v1.1.2) (2023-10-03)
 
 
