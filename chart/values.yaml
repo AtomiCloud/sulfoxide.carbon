@@ -1,7 +1,9 @@
+# -- AtomiCloud Service Tree. See [ServiceTree](https://atomicloud.larksuite.com/wiki/OkfJwTXGFiMJkrk6W3RuwRrZs64?theme=DARK&contentTheme=DARK#MHw5d76uDo2tBLx86cduFQMRsBb)
 serviceTree:
   landscape: pichu
-  platform: systems
-  service: bootstrap
+  cluster: opal
+  platform: sulfoxide
+  service: carbon
   layer: "1"
 
 revisionLimit: 3
@@ -25,14 +27,14 @@ apps:
 
   kyverno:
     sync: 1
-    deploy: true
-    release: pichu-kyverno
-    repo: https://github.com/AtomiCloud/helm.systems_kyverno
+    deploy: false
+    release: argon
+    repo: https://github.com/AtomiCloud/sulfoxide.argon
     version: HEAD
     path: "chart"
-    values: ["values.yaml", "values.pichu.yaml"]
-    namespace: policy-engine
-    createNamespace: true
+    values: ["values.yaml" ]
+    namespace: sulfoxide
+    createNamespace: false
     pruneLast: true
     replace: false
     serverSideApply: true
@@ -40,13 +42,13 @@ apps:
   policies:
     sync: 2
     deploy: false
-    release: kyverno-policies
-    repo: https://github.com/AtomiCloud/helm.systems_kyverno-policies
+    release: sodium
+    repo: https://github.com/AtomiCloud/sulfoxide.sodium
     version: HEAD
     path: "chart"
     values: ["values.yaml"]
-    namespace: policy-engine
-    createNamespace: true
+    namespace: sulfoxide
+    createNamespace: false
     pruneLast: true
     replace: false
     serverSideApply: false
@@ -54,13 +56,13 @@ apps:
   metric-server:
     sync: 3
     deploy: false
-    release: metric-server
-    repo: https://github.com/AtomiCloud/helm.systems_metric-server
+    release: xenon
+    repo: https://github.com/AtomiCloud/sulfoxide.xenon
     version: HEAD
     path: "chart"
     values: ["values.yaml"]
     namespace: kube-system
-    createNamespace: true
+    createNamespace: false
     pruneLast: true
     replace: false
     serverSideApply: false
@@ -68,13 +70,13 @@ apps:
   reloader:
     sync: 3
     deploy: false
-    release: reloader
-    repo: https://github.com/AtomiCloud/helm.systems_reloader
+    release: chlorine
+    repo: https://github.com/AtomiCloud/sulfoxide.chlorine
     version: HEAD
     path: "chart"
     values: ["values.yaml"]
-    namespace: reloader
-    createNamespace: true
+    namespace: sulfoxide
+    createNamespace: false
     pruneLast: true
     replace: false
     serverSideApply: false
@@ -82,41 +84,55 @@ apps:
   cert-manager:
     sync: 3
     deploy: false
-    release: cert-manager
-    repo: https://github.com/AtomiCloud/helm.systems_cert-manager
+    release: sulfur
+    repo: https://github.com/AtomiCloud/sulfoxide.sulfur
     version: HEAD
     path: "chart"
     values: ["values.yaml"]
-    namespace: cert-manager
-    createNamespace: true
+    namespace: sulfoxide
+    createNamespace: false
     pruneLast: true
     replace: false
     serverSideApply: false
 
-  otel:
+  otel-operator:
     sync: 3
     deploy: false
-    release: otel
-    repo: https://github.com/AtomiCloud/helm.systems_otel-operator
+    release: lithium
+    repo: https://github.com/AtomiCloud/sulfoxide.lithium
     version: HEAD
     path: chart
     values: ["values.yaml"]
-    namespace: otel
-    createNamespace: true
+    namespace: sulfoxide
+    createNamespace: false
+    pruneLast: true
+    replace: false
+    serverSideApply: false
+
+  secrets-engine:
+    sync: 3
+    deploy: false
+    release: cobalt
+    repo: https://github.com/AtomiCloud/sulfoxide.cobalt
+    version: HEAD
+    path: chart
+    values: ["values.yaml"]
+    namespace: sulfoxide
+    createNamespace: false
     pruneLast: true
     replace: false
     serverSideApply: false
 
   cloudflared:
-    sync: 3
+    sync: 4
     deploy: false
-    release: cloudflared
-    repo: https://github.com/AtomiCloud/helm.systems_cloudflared
+    release: boron
+    repo: https://github.com/AtomiCloud/sulfoxide.boron
     version: HEAD
     path: chart
     values: ["values.yaml"]
-    namespace: internal-ingress
-    createNamespace: true
+    namespace: sulfoxide
+    createNamespace: false
     pruneLast: true
     replace: false
     serverSideApply: false
@@ -124,13 +140,13 @@ apps:
   keda:
     sync: 4
     deploy: false
-    release: keda
-    repo: https://github.com/AtomiCloud/helm.systems_keda
+    release: iron
+    repo: https://github.com/AtomiCloud/sulfoxide.iron
     version: HEAD
     path: "chart"
     values: ["values.yaml"]
-    namespace: keda
-    createNamespace: true
+    namespace: sulfoxide
+    createNamespace: false
     pruneLast: true
     replace: false
     serverSideApply: true
@@ -138,12 +154,12 @@ apps:
   cluster-issuer:
     sync: 4
     deploy: false
-    release: cluster-issuer
-    repo: https://github.com/AtomiCloud/helm.systems_cluster-issuer
+    release: zinc
+    repo: https://github.com/AtomiCloud/sulfoxide.zinc
     version: HEAD
     path: chart
     values: ["values.yaml"]
-    namespace: cert-manager
+    namespace: sulfoxide
     createNamespace: false
     pruneLast: true
     replace: false
@@ -152,12 +168,12 @@ apps:
   otel-collectors:
     sync: 4
     deploy: false
-    release: otel-collectors
-    repo: https://github.com/AtomiCloud/helm.systems_otel-collectors
+    release: silicon
+    repo: https://github.com/AtomiCloud/sulfoxide.silicon
     version: HEAD
     path: chart
     values: ["values.yaml"]
-    namespace: otel
+    namespace: sulfoxide
     createNamespace: false
     pruneLast: true
     replace: false
@@ -166,13 +182,13 @@ apps:
   kong:
     sync: 5
     deploy: false
-    release: kong
-    repo: https://github.com/AtomiCloud/helm.systems_kong-ingress
+    release: oxygen
+    repo: https://github.com/AtomiCloud/sulfoxide.oxygen
     version: HEAD
     path: chart
     values: ["values.yaml"]
-    namespace: external-ingress
-    createNamespace: true
+    namespace: sulfoxide
+    createNamespace: false
     pruneLast: true
     replace: false
     serverSideApply: false

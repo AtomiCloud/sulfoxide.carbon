@@ -1,0 +1,72 @@
+# -- AtomiCloud Service Tree. See [ServiceTree](https://atomicloud.larksuite.com/wiki/OkfJwTXGFiMJkrk6W3RuwRrZs64?theme=DARK&contentTheme=DARK#MHw5d76uDo2tBLx86cduFQMRsBb)
+serviceTree:
+  landscape: entei
+  cluster: opal
+  platform: sulfoxide
+  service: carbon
+  layer: "1"
+
+revisionLimit: 3
+projectName: default
+destination: https://7c18dd8b-3d7a-43da-9ad6-b38c615781b0.k8s.ondigitalocean.com
+
+apps:
+  prometheus:
+    sync: 0
+    deploy: true
+    values: [ "values.yaml" ]
+    namespace: default
+
+  kyverno:
+    deploy: false
+
+  policies:
+    deploy: false
+
+  metric-server:
+    sync: 1
+    deploy: true
+    values: ["values.yaml", "values.entei.yaml"]
+    namespace: kube-system
+    createNamespace: true
+
+  reloader:
+    deploy: false
+
+  cert-manager:
+    sync: 1
+    deploy: true
+    values: ["values.yaml", "values.entei.yaml"]
+    namespace: sulfoxide
+    createNamespace: true
+
+  otel-operator:
+    deploy: false
+
+  secrets-engine:
+    sync: 1
+    deploy: true
+    values: ["values.yaml", "values.entei.yaml"]
+    namespace: sulfoxide
+    createNamespace: true
+
+  cloudflared:
+    sync: 2
+    deploy: true
+    values: ["values.yaml", "values.entei.yaml"]
+
+  keda:
+    deploy: false
+
+  cluster-issuer:
+    sync: 2
+    deploy: true
+    values: ["values.yaml", "values.entei.yaml"]
+
+  otel-collectors:
+    deploy: false
+
+  kong:
+    sync: 3
+    deploy: true
+    values: ["values.yaml", "values.entei.yaml"]

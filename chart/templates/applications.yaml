@@ -7,10 +7,10 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   annotations:
-    {{- include "atomi-app-of-apps.annotations" $ | nindent 4 }}
+    {{- include "sulfoxide-carbon.annotations" $ | nindent 4 }}
     argocd.argoproj.io/sync-wave: "{{ $v.sync }}"
   labels:
-    {{- include "atomi-app-of-apps.labels" $ | nindent 4 }}
+    {{- include "sulfoxide-carbon.labels" $ | nindent 4 }}
     atomi.cloud/bootstrap-type: agnostic
 spec:
   project: {{ $.Values.projectName }}
@@ -24,10 +24,15 @@ spec:
       ignoreMissingValueFiles: false
       parameters: []
       passCredentials: false
-      releaseName: {{ $v.release }}
+      releaseName: {{ $.Values.serviceTree.landscape }}-{{ $v.release }}
       skipCrds: false
       valueFiles:
         {{- toYaml $v.values | nindent 8 }}
+      {{ with $v.secretValues }}
+      values: |
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+
     {{- if $v.chart }}
     chart: {{ $v.chart }}
     {{- end }}

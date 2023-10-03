@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "atomi-app-of-apps.name" -}}
+{{- define "sulfoxide-carbon.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "atomi-app-of-apps.fullname" -}}
+{{- define "sulfoxide-carbon.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "atomi-app-of-apps.chart" -}}
+{{- define "sulfoxide-carbon.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "atomi-app-of-apps.labels" -}}
-helm.sh/chart: {{ include "atomi-app-of-apps.chart" . }}
-{{ include "atomi-app-of-apps.selectorLabels" . }}
+{{- define "sulfoxide-carbon.labels" -}}
+helm.sh/chart: {{ include "sulfoxide-carbon.chart" . }}
+{{ include "sulfoxide-carbon.selectorLabels" . }}
 {{- range $k, $v := .Values.serviceTree }}
 "atomi.cloud/{{ $k }}": "{{ $v }}"
 {{- end }}
@@ -48,7 +48,7 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Common annotations
 */}}
-{{- define "atomi-app-of-apps.annotations" -}}
+{{- define "sulfoxide-carbon.annotations" -}}
 {{- range $k, $v := .Values.serviceTree }}
 "atomi.cloud/{{ $k }}": "{{ $v }}"
 {{- end }}
@@ -57,17 +57,17 @@ Common annotations
 {{/*
 Selector labels
 */}}
-{{- define "atomi-app-of-apps.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "atomi-app-of-apps.name" . }}
+{{- define "sulfoxide-carbon.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "sulfoxide-carbon.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "atomi-app-of-apps.serviceAccountName" -}}
+{{- define "sulfoxide-carbon.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "atomi-app-of-apps.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "sulfoxide-carbon.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
