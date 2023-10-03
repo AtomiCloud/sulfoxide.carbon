@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.0.2...v1.1.0) (2023-10-03)
+
+
+### 🚀 New Features
+
+* entei values ([561c6e8](https://github.com/AtomiCloud/sulfoxide.carbon/commit/561c6e80df692e2ef702c35ed76cf85f669a1ade))
+
 ## [1.0.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.0.1...v1.0.2) (2023-09-27)
 
 
