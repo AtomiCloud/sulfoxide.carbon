@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.1.0...v1.1.1) (2023-10-03)
+
+
+### 🐛 Bug Fixes
+
+* **entei:** destination to 6443 port ([f77218d](https://github.com/AtomiCloud/sulfoxide.carbon/commit/f77218da0b1962f63ae7993b4b9e87c39ff2ccc3))
+
 ## [1.1.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.0.2...v1.1.0) (2023-10-03)
 
 
