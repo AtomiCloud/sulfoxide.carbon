@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.1.3...v1.1.4) (2023-10-03)
+
+
+### 🐛 Bug Fixes
+
+* **entei:** remove secrets engine ([971d8b2](https://github.com/AtomiCloud/sulfoxide.carbon/commit/971d8b244955e5f9ba50ceb297f5040afccbb4f8))
+
 ## [1.1.3](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.1.2...v1.1.3) (2023-10-03)
 
 
