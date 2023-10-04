@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.3.0...v1.4.0) (2023-10-04)
+
+
+### 🚀 New Features
+
+* external-dns ([a3a8a4a](https://github.com/AtomiCloud/sulfoxide.carbon/commit/a3a8a4adfdbfc62847e181acdfea36e8bb5953f6))
+
 ## [1.3.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.2.0...v1.3.0) (2023-10-04)
 
 
