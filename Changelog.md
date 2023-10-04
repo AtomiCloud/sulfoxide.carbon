@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.2.0...v1.3.0) (2023-10-04)
+
+
+### 🚀 New Features
+
+* **entei:** deploy traefik ([e29a72e](https://github.com/AtomiCloud/sulfoxide.carbon/commit/e29a72e908978bbff5cf0cf430241018cc54e9b3))
+
 ## [1.2.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.1.4...v1.2.0) (2023-10-04)
 
 
