@@ -1,4 +1,3 @@
-# -- AtomiCloud Service Tree. See [ServiceTree](https://atomicloud.larksuite.com/wiki/OkfJwTXGFiMJkrk6W3RuwRrZs64?theme=DARK&contentTheme=DARK#MHw5d76uDo2tBLx86cduFQMRsBb)
 serviceTree:
   landscape: entei
   cluster: opal
@@ -26,7 +25,7 @@ apps:
   metric-server:
     sync: 1
     deploy: true
-    values: ["values.yaml", "values.entei.yaml"]
+    values: ["values.yaml", "values.entei.opal.yaml"]
     namespace: kube-system
     createNamespace: true
 
@@ -36,7 +35,7 @@ apps:
   cert-manager:
     sync: 1
     deploy: true
-    values: ["values.yaml", "values.entei.yaml"]
+    values: ["values.yaml", "values.entei.opal.yaml"]
     namespace: sulfoxide
     createNamespace: true
 
@@ -46,7 +45,7 @@ apps:
   cloudflared:
     sync: 2
     deploy: true
-    values: ["values.yaml", "values.entei.yaml"]
+    values: ["values.yaml", "values.entei.opal.yaml"]
 
   keda:
     deploy: false
@@ -54,7 +53,7 @@ apps:
   cluster-issuer:
     sync: 2
     deploy: true
-    values: ["values.yaml", "values.entei.yaml"]
+    values: ["values.yaml", "values.entei.opal.yaml"]
 
   otel-collectors:
     deploy: false
@@ -62,4 +61,4 @@ apps:
   kong:
     sync: 3
     deploy: true
-    values: ["values.yaml", "values.entei.yaml"]
+    values: ["values.yaml", "values.entei.opal.yaml"]
