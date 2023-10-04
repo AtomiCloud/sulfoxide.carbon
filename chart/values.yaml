@@ -123,6 +123,20 @@ apps:
     replace: false
     serverSideApply: false
 
+  external-dns:
+    sync: 4
+    deploy: false
+    release: tin
+    repo: https://github.com/AtomiCloud/sulfoxide.tin
+    version: HEAD
+    path: chart
+    values: [ "values.yaml", "values.entei.opal.yaml" ]
+    namespace: sulfoxide
+    createNamespace: false
+    pruneLast: true
+    replace: false
+    serverSideApply: false
+
   cloudflared:
     sync: 4
     deploy: false
@@ -150,6 +164,8 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: true
+
+
 
   cluster-issuer:
     sync: 4
