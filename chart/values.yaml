@@ -179,6 +179,20 @@ apps:
     replace: false
     serverSideApply: false
 
+  traefik:
+    sync: 5
+    deploy: false
+    release: gold
+    repo: https://github.com/AtomiCloud/sulfoxide.gold
+    version: HEAD
+    path: chart
+    values: [ "values.yaml" ]
+    namespace: sulfoxide
+    createNamespace: false
+    pruneLast: true
+    replace: false
+    serverSideApply: false
+
   kong:
     sync: 5
     deploy: false

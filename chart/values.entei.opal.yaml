@@ -62,3 +62,8 @@ apps:
     sync: 3
     deploy: true
     values: ["values.yaml", "values.entei.opal.yaml"]
+
+  traefik:
+    sync: 3
+    deploy: true
+    values: ["values.yaml", "values.entei.opal.yaml"]
