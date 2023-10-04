@@ -195,7 +195,7 @@ apps:
     replace: false
     serverSideApply: false
 
-  traefik:
+  nginx:
     sync: 5
     deploy: false
     release: gold
@@ -218,6 +218,46 @@ apps:
     path: chart
     values: ["values.yaml"]
     namespace: sulfoxide
+    createNamespace: false
+    pruneLast: true
+    replace: false
+    serverSideApply: false
+
+  pichu-vcluster:
+    sync: 6
+    deploy: false
+    release: pichu-iodine
+    repo: https://github.com/AtomiCloud/sulfoxide.iodine
+    version: HEAD
+    path: chart
+    values: [ "values.yaml" ]
+    namespace: pichu
+    createNamespace: false
+    pruneLast: true
+    replace: false
+    serverSideApply: false
+  pikachu-vcluster:
+    sync: 6
+    deploy: false
+    release: pikachu-iodine
+    repo: https://github.com/AtomiCloud/sulfoxide.iodine
+    version: HEAD
+    path: chart
+    values: [ "values.yaml" ]
+    namespace: pikachu
+    createNamespace: false
+    pruneLast: true
+    replace: false
+    serverSideApply: false
+  raichu-vcluster:
+    sync: 6
+    deploy: false
+    release: raichu-iodine
+    repo: https://github.com/AtomiCloud/sulfoxide.iodine
+    version: HEAD
+    path: chart
+    values: [ "values.yaml" ]
+    namespace: raichu
     createNamespace: false
     pruneLast: true
     replace: false
