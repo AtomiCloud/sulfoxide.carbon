@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.1.4...v1.2.0) (2023-10-04)
+
+
+### 🚀 New Features
+
+* **entei-opal:** migrate entei to entei opal ([99dcd10](https://github.com/AtomiCloud/sulfoxide.carbon/commit/99dcd10060849cb00bd704f345fcf4ff485fa80d))
+
 ## [1.1.4](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.1.3...v1.1.4) (2023-10-03)
 
 
