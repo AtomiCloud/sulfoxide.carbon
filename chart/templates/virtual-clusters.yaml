@@ -3,10 +3,10 @@ apiVersion: external-secrets.io/v1beta1
 kind: ExternalSecret
 metadata:
   name: {{ $k }}-cluster-secret
-  annotations:
-    {{- include "sulfoxide-carbon.annotations" $ | nindent 4 }}
-  labels:
-    {{- include "sulfoxide-carbon.labels" $ | nindent 4 }}
+  annotations: {{- include "sulfoxide-carbon.annotations" $ | nindent 4 }}
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/weight: "1"
+  labels: {{- include "sulfoxide-carbon.labels" $ | nindent 4 }}
 spec:
   refreshInterval: {{ $v.refreshInterval }}
   secretStoreRef:
@@ -23,9 +23,8 @@ spec:
 {{/*      data:*/}}
 {{/*        BEARER_TOKEN: '{{ `{{ get ((get ( .kubeconfig | fromJson ) "config") | fromJson ) "bearerToken" }}` }}'*/}}
   dataFrom:
-    - find:
-        name:
-          regexp: "vc-{{ $.Values.serviceTree.landscape }}-{{ $k }}-iodine"
+    - extract:
+        key: "vc-{{ $.Values.serviceTree.landscape }}-{{ $k }}-iodine"
       rewrite:
         - regexp:
             source: "(.*)"
