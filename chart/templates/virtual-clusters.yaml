@@ -1,0 +1,30 @@
+{{- range $k, $v := .Values.virtualClusters }}
+apiVersion: external-secrets.io/v1beta1
+kind: ExternalSecret
+metadata:
+  name: {{ $k }}-external-secret-bearer-token
+  annotations:
+    {{- include "sulfoxide-carbon.annotations" $ | nindent 4 }}
+  labels:
+    {{- include "sulfoxide-carbon.labels" $ | nindent 4 }}
+spec:
+  refreshInterval: {{ $v.refreshInterval }}
+  secretStoreRef:
+    name: {{ $v.store.name }}
+    kind: {{ $v.store.kind }}
+  target:
+    name: {{ $k }}-cluster-secret-bearer-token
+    creationPolicy: {{ $v.policy.creation }}
+    deletionPolicy: {{ $v.policy.deletion }}
+{{/*    template:*/}}
+{{/*      metadata:*/}}
+{{/*        labels: {{- include "sulfoxide-carbon.labels" $ | nindent 10 }}*/}}
+{{/*        annotations: {{- include "sulfoxide-carbon.annotations" $ | nindent 10 }}*/}}
+{{/*      data:*/}}
+{{/*        BEARER_TOKEN: '{{ `{{ get ((get ( .kubeconfig | fromJson ) "config") | fromJson ) "bearerToken" }}` }}'*/}}
+  dataFrom:
+    - find:
+        name:
+          regexp: "vc-{{ .Values.serviceTree.landscape }}-{{ $k }}-iodine"
+---
+{{- end }}

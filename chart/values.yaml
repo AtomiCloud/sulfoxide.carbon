@@ -10,6 +10,16 @@ revisionLimit: 3
 projectName: default
 destination: https://d1943bf9-8108-45d0-a666-9782e2e848c7.vultr-k8s.com:6443
 
+virtualClusters: {}
+#  pichu:
+#    refreshInterval: 1m
+#    store:
+#      name: entei-opal
+#      kind: ClusterStore
+#    policy:
+#      creation: Owner
+#      deletion: Retain
+
 apps:
   prometheus:
     sync: 0
