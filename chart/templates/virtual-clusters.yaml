@@ -40,15 +40,36 @@ spec:
     name: {{ $k }}-cluster-secret
     creationPolicy: {{ $v.policy.creation }}
     deletionPolicy: {{ $v.policy.deletion }}
-{{/*    template:*/}}
-{{/*      metadata:*/}}
-{{/*        labels: {{- include "sulfoxide-carbon.labels" $ | nindent 10 }}*/}}
-{{/*        annotations: {{- include "sulfoxide-carbon.annotations" $ | nindent 10 }}*/}}
-{{/*      data:*/}}
-{{/*        BEARER_TOKEN: '{{ `{{ get ((get ( .kubeconfig | fromJson ) "config") | fromJson ) "bearerToken" }}` }}'*/}}
+    template:
+      metadata:
+        labels: {{- include "sulfoxide-carbon.labels" $ | nindent 10 }}
+          argocd.argoproj.io/secret-type: cluster
+        annotations: {{- include "sulfoxide-carbon.annotations" $ | nindent 10 }}
+          argocd.argoproj.io/secret-type: cluster
+      data:
+        name: "{{ $k }}-{{ $.Values.serviceTree.cluster }}"
+        server: "https://{{ $k }}.{{ $.Values.serviceTree.cluster }}.{{ $v.apiServerBaseDomain }}"
+        config: |
+          {
+            "tlsClientConfig": {
+              "caData": "{{ `{{ .ca | b6enc }}` }}",
+              "certData": "{{ `{{ .cert | b6enc }}` }}",
+              "keyData": "{{ `{{ .key | b6enc }}` }}",
+              "insecure": false
+            }
+          }
   data:
-    - secretKey: "iodine"
+    - secretKey: "ca"
       remoteRef:
         key: "vc-{{ $.Values.serviceTree.landscape }}-{{ $k }}-iodine"
+        property: certificate-authority
+    - secretKey: "cert"
+      remoteRef:
+        key: "vc-{{ $.Values.serviceTree.landscape }}-{{ $k }}-iodine"
+        property: client-certificate
+    - secretKey: "key"
+      remoteRef:
+        key: "vc-{{ $.Values.serviceTree.landscape }}-{{ $k }}-iodine"
+        property: client-key
 ---
 {{- end }}
