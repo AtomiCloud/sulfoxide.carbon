@@ -16,6 +16,7 @@ spec:
           type: Secret
           name: "{{ $.Values.serviceTree.landscape }}-{{ $.Values.serviceTree.cluster }}-cluster-secret-ca-crt"
           key: ca.crt
+      remoteNamespace: {{ $k }}
       auth:
         token:
           bearerToken:
