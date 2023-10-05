@@ -26,5 +26,9 @@ spec:
     - find:
         name:
           regexp: "vc-{{ $.Values.serviceTree.landscape }}-{{ $k }}-iodine"
+      rewrite:
+        - regexp:
+            source: "(.*)"
+            target: "$1"
 ---
 {{- end }}
