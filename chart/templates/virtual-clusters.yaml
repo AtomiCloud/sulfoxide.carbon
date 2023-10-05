@@ -24,7 +24,7 @@ spec:
 {{/*        BEARER_TOKEN: '{{ `{{ get ((get ( .kubeconfig | fromJson ) "config") | fromJson ) "bearerToken" }}` }}'*/}}
   data:
     - remoteRef:
-        key: "vc-{{ $.Values.serviceTree.landscape }}-{{ $k }}-iodine"
+        key: "vc-{{ $.Values.serviceTree.landscape }}-{{ $k }}-iodine.{{ $k }}"
       secretKey: "iodine"
 ---
 {{- end }}
