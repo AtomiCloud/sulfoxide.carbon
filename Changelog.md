@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.5.0...v1.5.1) (2023-10-05)
+
+
+### 🐛 Bug Fixes
+
+* prevent clash ([bca8712](https://github.com/AtomiCloud/sulfoxide.carbon/commit/bca87124cc810f5817812e9856faf654e68556cf))
+
 ## [1.5.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.4.0...v1.5.0) (2023-10-04)
 
 
