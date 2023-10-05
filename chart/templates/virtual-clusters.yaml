@@ -3,12 +3,10 @@ apiVersion: external-secrets.io/v1beta1
 kind: SecretStore
 metadata:
   name: {{ $k }}-{{ $.Values.serviceTree.cluster }}
-  annotations:
-      {{- include "sulfoxide-carbon.annotations" $ | nindent 4 }}
+  annotations: {{- include "sulfoxide-carbon.annotations" $ | nindent 4 }}
     "helm.sh/hook": post-install, post-upgrade
     "helm.sh/hook-weight": "0"
-    labels:
-      {{- include "sulfoxide-carbon.labels" $ | nindent 4 }}
+  labels: {{- include "sulfoxide-carbon.labels" $ | nindent 4 }}
 spec:
   provider:
     kubernetes:
@@ -30,7 +28,7 @@ metadata:
   name: {{ $k }}-cluster-secret
   annotations: {{- include "sulfoxide-carbon.annotations" $ | nindent 4 }}
     helm.sh/hook: post-install,post-upgrade
-    helm.sh/weight: "1"
+    helm.sh/hook-weight: "1"
   labels: {{- include "sulfoxide-carbon.labels" $ | nindent 4 }}
 spec:
   refreshInterval: {{ $v.refreshInterval }}
