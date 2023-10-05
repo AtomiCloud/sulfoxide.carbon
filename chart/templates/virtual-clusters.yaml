@@ -13,7 +13,7 @@ spec:
     name: {{ $v.store.name }}
     kind: {{ $v.store.kind }}
   target:
-    name: {{ $k }}-cluster-secret-bearer-token
+    name: {{ $k }}-cluster-secret
     creationPolicy: {{ $v.policy.creation }}
     deletionPolicy: {{ $v.policy.deletion }}
 {{/*    template:*/}}
