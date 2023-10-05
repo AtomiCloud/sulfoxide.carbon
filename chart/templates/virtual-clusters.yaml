@@ -49,6 +49,6 @@ spec:
   data:
     - secretKey: "iodine"
       remoteRef:
-        key: "vc-{{ $.Values.serviceTree.landscape }}-{{ $k }}-iodine.{{ $k }}"
+        key: "vc-{{ $.Values.serviceTree.landscape }}-{{ $k }}-iodine"
 ---
 {{- end }}
