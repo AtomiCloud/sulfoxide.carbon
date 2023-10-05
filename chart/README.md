@@ -225,7 +225,7 @@ AtomiCloud Cluster Bootstrap Engine
 | apps.secrets-engine.sync | int | `3` |  |
 | apps.secrets-engine.values[0] | string | `"values.yaml"` |  |
 | apps.secrets-engine.version | string | `"HEAD"` |  |
-| destination | string | `"https://d1943bf9-8108-45d0-a666-9782e2e848c7.vultr-k8s.com:6443"` |  |
+| destination | string | `"https://kubernetes.api"` |  |
 | projectName | string | `"default"` |  |
 | revisionLimit | int | `3` |  |
 | serviceTree | object | `{"cluster":"opal","landscape":"pichu","layer":"1","platform":"sulfoxide","service":"carbon"}` | AtomiCloud Service Tree. See [ServiceTree](https://atomicloud.larksuite.com/wiki/OkfJwTXGFiMJkrk6W3RuwRrZs64?theme=DARK&contentTheme=DARK#MHw5d76uDo2tBLx86cduFQMRsBb) |
