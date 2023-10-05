@@ -22,12 +22,9 @@ spec:
 {{/*        annotations: {{- include "sulfoxide-carbon.annotations" $ | nindent 10 }}*/}}
 {{/*      data:*/}}
 {{/*        BEARER_TOKEN: '{{ `{{ get ((get ( .kubeconfig | fromJson ) "config") | fromJson ) "bearerToken" }}` }}'*/}}
-  dataFrom:
-    - extract:
+  data:
+    - remoteRef:
         key: "vc-{{ $.Values.serviceTree.landscape }}-{{ $k }}-iodine"
-      rewrite:
-        - regexp:
-            source: "(.*)"
-            target: "$1"
+      secretKey: "iodine"
 ---
 {{- end }}
