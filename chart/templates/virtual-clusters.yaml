@@ -1,5 +1,30 @@
 {{- range $k, $v := .Values.virtualClusters }}
 apiVersion: external-secrets.io/v1beta1
+kind: SecretStore
+metadata:
+  name: {{ $k }}-{{ $.Values.serviceTree.cluster }}
+  annotations:
+      {{- include "sulfoxide-carbon.annotations" $ | nindent 4 }}
+    "helm.sh/hook": post-install, post-upgrade
+    "helm.sh/hook-weight": "0"
+    labels:
+      {{- include "sulfoxide-carbon.labels" $ | nindent 4 }}
+spec:
+  provider:
+    kubernetes:
+      server:
+        url: "{{ $.Values.destination }}"
+        caProvider:
+          type: Secret
+          name: "{{ $.Values.serviceTree.landscape }}-{{ $.Values.serviceTree.cluster }}-cluster-secret-ca-crt"
+          key: ca.crt
+      auth:
+        token:
+          bearerToken:
+            name: "{{ $.Values.serviceTree.landscape }}-{{ $.Values.serviceTree.cluster }}-cluster-secret-bearer-token"
+            key: "BEARER_TOKEN"
+---
+apiVersion: external-secrets.io/v1beta1
 kind: ExternalSecret
 metadata:
   name: {{ $k }}-cluster-secret
@@ -10,8 +35,8 @@ metadata:
 spec:
   refreshInterval: {{ $v.refreshInterval }}
   secretStoreRef:
-    name: {{ $v.store.name }}
-    kind: {{ $v.store.kind }}
+    name: {{ $k }}-{{ $.Values.serviceTree.cluster }}
+    kind: SecretStore
   target:
     name: {{ $k }}-cluster-secret
     creationPolicy: {{ $v.policy.creation }}
