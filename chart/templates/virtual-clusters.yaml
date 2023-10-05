@@ -2,7 +2,7 @@
 apiVersion: external-secrets.io/v1beta1
 kind: ExternalSecret
 metadata:
-  name: {{ $k }}-external-secret-bearer-token
+  name: {{ $k }}-cluster-secret
   annotations:
     {{- include "sulfoxide-carbon.annotations" $ | nindent 4 }}
   labels:
