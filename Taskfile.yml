@@ -4,10 +4,10 @@ env:
   RELEASE_NAME: sulfoxide-carbon
 
 includes:
-  pichu:opal:
+  entei:opal:
     taskfile: tasks/Taskfile.cluster.yaml
     vars:
-      LANDSCAPE: pichu
+      LANDSCAPE: entei
       CLUSTER: opal
 
 tasks:

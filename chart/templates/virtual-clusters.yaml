@@ -25,6 +25,6 @@ spec:
   dataFrom:
     - find:
         name:
-          regexp: "vc-{{ .Values.serviceTree.landscape }}-{{ $k }}-iodine"
+          regexp: "vc-{{ $.Values.serviceTree.landscape }}-{{ $k }}-iodine"
 ---
 {{- end }}
