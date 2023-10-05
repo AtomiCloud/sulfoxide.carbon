@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.5.1...v1.5.2) (2023-10-05)
+
+
+### 🐛 Bug Fixes
+
+* rename external secret ([44d87b2](https://github.com/AtomiCloud/sulfoxide.carbon/commit/44d87b2f84eb33c1074358691142c72046a833c4))
+
 ## [1.5.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.5.0...v1.5.1) (2023-10-05)
 
 
