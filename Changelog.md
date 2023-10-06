@@ -1,3 +1,10 @@
+## [1.7.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.6.1...v1.7.0) (2023-10-06)
+
+
+### 🚀 New Features
+
+* enable policy enforcement ([3881849](https://github.com/AtomiCloud/sulfoxide.carbon/commit/3881849d204a1d91a79e4d82e5ccd0b4a2fe984d))
+
 ## [1.6.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.6.0...v1.6.1) (2023-10-06)
 
 
