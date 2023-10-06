@@ -11,19 +11,19 @@ destination: https://7c18dd8b-3d7a-43da-9ad6-b38c615781b0.k8s.ondigitalocean.com
 
 virtualClusters:
   pichu:
-    apiServerBaseDomain: kubernetes.atomi.cloud
+    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
     refreshInterval: 1m
     policy:
       creation: Owner
       deletion: Retain
   pikachu:
-    apiServerBaseDomain: kubernetes.atomi.cloud
+    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
     refreshInterval: 1m
     policy:
       creation: Owner
       deletion: Retain
   raichu:
-    apiServerBaseDomain: kubernetes.atomi.cloud
+    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
     refreshInterval: 1m
     policy:
       creation: Owner
