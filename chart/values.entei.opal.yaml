@@ -29,13 +29,13 @@ virtualClusters:
       creation: Owner
       deletion: Retain
 
-
 apps:
   prometheus:
     sync: 0
     deploy: true
     values: [ "values.yaml" ]
-    namespace: default
+    namespace: sulfoxide
+    createNamespace: true
 
   kyverno:
     deploy: false
@@ -51,7 +51,10 @@ apps:
     createNamespace: false
 
   reloader:
-    deploy: false
+    sync: 1
+    deploy: true
+    values: ["values.yaml", "values.entei.opal.yaml"]
+    namespace: sulfoxide
 
   cert-manager:
     sync: 1
@@ -61,7 +64,10 @@ apps:
     createNamespace: true
 
   otel-operator:
-    deploy: false
+    sync: 1
+    deploy: true
+    values: ["values.yaml", "values.entei.opal.yaml"]
+    namespace: sulfoxide
 
   external-dns:
     sync: 1
@@ -88,24 +94,24 @@ apps:
 
   nginx:
     sync: 3
-    deploy: true
+    deploy: false
     values: ["values.yaml", "values.entei.opal.yaml"]
 
   pichu-vcluster:
     sync: 4
-    deploy: true
+    deploy: false
     release: pichu-iodine
     values: [ "values.yaml", "values.pichu.opal.yaml" ]
     createNamespace: true
 
   pikachu-vcluster:
     sync: 4
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.pikachu.opal.yaml" ]
     createNamespace: true
 
   raichu-vcluster:
     sync: 4
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.raichu.opal.yaml" ]
     createNamespace: true
