@@ -93,19 +93,19 @@ apps:
 
   pichu-vcluster:
     sync: 4
-    deploy: true
+    deploy: false
     release: pichu-iodine
     values: [ "values.yaml", "values.pichu.opal.yaml" ]
     createNamespace: true
 
   pikachu-vcluster:
     sync: 4
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.pikachu.opal.yaml" ]
     createNamespace: true
 
   raichu-vcluster:
     sync: 4
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.raichu.opal.yaml" ]
     createNamespace: true
