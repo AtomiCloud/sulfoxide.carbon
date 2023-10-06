@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.6.0...v1.6.1) (2023-10-06)
+
+
+### 🐛 Bug Fixes
+
+* migrate to centralize cluster.atomi.cloud ([1e1e1b7](https://github.com/AtomiCloud/sulfoxide.carbon/commit/1e1e1b7945980a1327f61b4bd8b52a2e44fd82e5))
+
 ## [1.6.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.5.2...v1.6.0) (2023-10-05)
 
 
