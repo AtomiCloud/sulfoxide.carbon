@@ -90,7 +90,7 @@ apps:
 
   nginx:
     sync: 3
-    deploy: false
+    deploy: true
     values: ["values.yaml", "values.entei.opal.yaml"]
 
   pichu-vcluster:
