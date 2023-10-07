@@ -246,6 +246,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+
   pikachu-vcluster:
     sync: 6
     deploy: false
@@ -259,6 +260,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+
   raichu-vcluster:
     sync: 6
     deploy: false
