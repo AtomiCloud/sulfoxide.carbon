@@ -1,3 +1,10 @@
+## [1.8.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.7.0...v1.8.0) (2023-10-08)
+
+
+### 🚀 New Features
+
+* deploy collectors ([6462aa3](https://github.com/AtomiCloud/sulfoxide.carbon/commit/6462aa3e7ce7b6f52895fe336fb5bbd4fe835324))
+
 ## [1.7.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.6.1...v1.7.0) (2023-10-06)
 
 
