@@ -85,7 +85,7 @@ apps:
 
   otel-collectors:
     sync: 3
-    deploy: false
+    deploy: true
     values: ["values.yaml", "values.entei.opal.yaml"]
 
   nginx:
