@@ -1,9 +1,6 @@
 serviceTree:
   landscape: pichu
   cluster: opal
-  platform: sulfoxide
-  service: carbon
-  layer: "1"
 
 revisionLimit: 3
 projectName: default
