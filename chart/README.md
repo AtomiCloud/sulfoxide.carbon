@@ -62,7 +62,6 @@ AtomiCloud Cluster Bootstrap Engine
 | apps.keda.ignoreDifferences[0].group | string | `"apiregistration.k8s.io"` |  |
 | apps.keda.ignoreDifferences[0].jsonPointers[0] | string | `"/spec/insecureSkipTLSVerify"` |  |
 | apps.keda.ignoreDifferences[0].kind | string | `"APIService"` |  |
-| apps.keda.ignoreDifferences[0].name | string | `"*"` |  |
 | apps.keda.ignoreDifferences[0].namespace | string | `"sulfoxide"` |  |
 | apps.keda.namespace | string | `"sulfoxide"` |  |
 | apps.keda.path | string | `"chart"` |  |

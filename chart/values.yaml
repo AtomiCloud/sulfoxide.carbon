@@ -187,7 +187,6 @@ apps:
     ignoreDifferences:
       - group: apiregistration.k8s.io
         kind: APIService
-        name: "*"
         namespace: sulfoxide
         jsonPointers:
           - /spec/insecureSkipTLSVerify
