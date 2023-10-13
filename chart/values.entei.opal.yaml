@@ -9,25 +9,25 @@ revisionLimit: 3
 projectName: default
 destination: https://4236c1de-c493-465a-a5f6-be0535ad3ac1.k8s.ondigitalocean.com
 
-virtualClusters:
-  pichu:
-    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-    refreshInterval: 1m
-    policy:
-      creation: Owner
-      deletion: Retain
-  pikachu:
-    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-    refreshInterval: 1m
-    policy:
-      creation: Owner
-      deletion: Retain
-  raichu:
-    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-    refreshInterval: 1m
-    policy:
-      creation: Owner
-      deletion: Retain
+virtualClusters: {}
+#  pichu:
+#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+#    refreshInterval: 1m
+#    policy:
+#      creation: Owner
+#      deletion: Retain
+#  pikachu:
+#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+#    refreshInterval: 1m
+#    policy:
+#      creation: Owner
+#      deletion: Retain
+#  raichu:
+#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+#    refreshInterval: 1m
+#    policy:
+#      creation: Owner
+#      deletion: Retain
 
 apps:
   prometheus:
