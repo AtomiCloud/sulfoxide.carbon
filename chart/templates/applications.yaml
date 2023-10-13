@@ -59,7 +59,8 @@ spec:
         maxDuration: 3m
   revisionHistoryLimit: {{ $.Values.revisionLimit }}
   {{- with $v.ignoreDifferences }}
-  {{ toYaml . | nindent 2 }}
+  ignoreDifferences:
+  {{ toYaml . | nindent 4 }}
   {{- end }}
   {{- end }}
 ---
