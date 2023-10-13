@@ -36,7 +36,7 @@ apps:
     chart: prometheus-operator-crds
 
   # Kyverno, Policy Engine, Argon
-  kyverno:
+  argon:
     sync: 1
     deploy: false
     release: argon
@@ -51,7 +51,7 @@ apps:
     serverSideApply: true
 
   # Kyverno Policies, Policies, Sodium
-  policies:
+  sodium:
     sync: 2
     deploy: false
     release: sodium
@@ -66,7 +66,7 @@ apps:
     serverSideApply: false
 
   # Metric Server, Metrics, Xenon
-  metric-server:
+  xenon:
     sync: 3
     deploy: false
     release: xenon
@@ -81,7 +81,7 @@ apps:
     serverSideApply: false
 
   # Reloader, Reloader, Chlorine
-  reloader:
+  chlorine:
     sync: 3
     deploy: false
     release: chlorine
@@ -96,7 +96,7 @@ apps:
     serverSideApply: false
 
   # Cert Manager, Certificate Engine, Sulfur
-  cert-manager:
+  sulfur:
     sync: 3
     deploy: false
     release: sulfur
@@ -111,7 +111,7 @@ apps:
     serverSideApply: false
 
   # OTEL Operator, Observability Engine, Lithium
-  otel-operator:
+  lithium:
     sync: 3
     deploy: false
     release: lithium
@@ -126,7 +126,7 @@ apps:
     serverSideApply: false
 
   # External Secrets, Secrets Engine, Cobalt
-  secrets-engine:
+  cobalt:
     sync: 3
     deploy: false
     release: cobalt
@@ -141,7 +141,7 @@ apps:
     serverSideApply: false
 
   # External DNS, DNS Engine, Tin
-  external-dns:
+  tin:
     sync: 4
     deploy: false
     release: tin
@@ -156,7 +156,7 @@ apps:
     serverSideApply: false
 
   # Cloudflared, Internal Ingress, Boron
-  cloudflared:
+  boron:
     sync: 4
     deploy: false
     release: boron
@@ -171,7 +171,7 @@ apps:
     serverSideApply: false
 
   # KEDA, Pod Autoscaler, Iron
-  keda:
+  iron:
     sync: 4
     deploy: false
     release: iron
@@ -192,7 +192,7 @@ apps:
           - /spec/insecureSkipTLSVerify
 
   # Cluster Issuer, Certificate Issuer, Zinc
-  cluster-issuer:
+  zinc:
     sync: 4
     deploy: false
     release: zinc
@@ -207,7 +207,7 @@ apps:
     serverSideApply: false
 
   # OTEL Collectors, Observability Agents, Silicon
-  otel-collectors:
+  silicon:
     sync: 4
     deploy: false
     release: silicon
@@ -222,7 +222,7 @@ apps:
     serverSideApply: false
 
   # Nginx, External Ingress, Gold
-  nginx:
+  gold:
     sync: 5
     deploy: false
     release: gold
@@ -237,7 +237,7 @@ apps:
     serverSideApply: false
 
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
-  pichu-vcluster:
+  pichu-iodine:
     sync: 6
     deploy: false
     release: pichu-iodine
@@ -252,7 +252,7 @@ apps:
     serverSideApply: false
 
   # pikachu vcluster, Pikachu Virtual Cluster, Pikachu Iodine
-  pikachu-vcluster:
+  pikachu-iodine:
     sync: 6
     deploy: false
     release: pikachu-iodine
@@ -267,7 +267,7 @@ apps:
     serverSideApply: false
 
   # raichu vcluster, Raichu Virtual Cluster, Raichu Iodine
-  raichu-vcluster:
+  raichu-iodine:
     sync: 6
     deploy: false
     release: raichu-iodine

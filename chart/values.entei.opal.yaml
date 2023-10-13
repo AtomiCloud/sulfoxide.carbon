@@ -9,25 +9,25 @@ revisionLimit: 3
 projectName: default
 destination: https://4236c1de-c493-465a-a5f6-be0535ad3ac1.k8s.ondigitalocean.com
 
-virtualClusters: {}
-#  pichu:
-#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
-#  pikachu:
-#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
-#  raichu:
-#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
+virtualClusters:
+  pichu:
+    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
+  pikachu:
+    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
+  raichu:
+    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
 
 apps:
   prometheus:
@@ -35,79 +35,94 @@ apps:
     deploy: true
     values: [ "values.yaml" ]
 
-  kyverno:
+  # Kyverno, Policy Engine, Argon
+  argon:
     sync: 1
     deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
-  policies:
-    sync: 2
-    deploy: false
-    values: [ "values.yaml", "values.entei.opal.yaml" ]
-
-  metric-server:
+  # Metric Server, Metrics, Xenon
+  xenon:
     sync: 1
     deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
-  reloader:
+  # Reloader, Reloader, Chlorine
+  chlorine:
     sync: 1
     deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
-  cert-manager:
+  # Cert Manager, Certificate Engine, Sulfur
+  sulfur:
     sync: 1
     deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
-  external-dns:
+  # External DNS, DNS Engine, Tin
+  tin:
     sync: 1
     deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
-  cloudflared:
+  # Kyverno Policies, Policies, Sodium
+  sodium:
     sync: 2
     deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
-  keda:
+  # Cloudflared, Internal Ingress, Boron
+  boron:
     sync: 2
     deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
-  otel-operator:
+  # KEDA, Pod Autoscaler, Iron
+  iron:
     sync: 2
     deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
-  cluster-issuer:
+  # OTEL Operator, Observability Engine, Lithium
+  lithium:
     sync: 2
     deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
-  otel-collectors:
+  # Cluster Issuer, Certificate Issuer, Zinc
+  zinc:
+    sync: 2
+    deploy: false
+    values: [ "values.yaml", "values.entei.opal.yaml" ]
+
+  # OTEL Collectors, Observability Agents, Silicon
+  silicon:
     sync: 3
     deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
-  nginx:
+  # Nginx, External Ingress, Gold
+  gold:
     sync: 3
     deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
-  pichu-vcluster:
+  # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
+  pichu-iodine:
     sync: 4
     deploy: false
     values: [ "values.yaml", "values.pichu.opal.yaml" ]
     createNamespace: true
 
-  pikachu-vcluster:
+  # pikachu vcluster, Pikachu Virtual Cluster, Pikachu Iodine
+  pikachu-iodine:
     sync: 4
     deploy: false
     values: [ "values.yaml", "values.pikachu.opal.yaml" ]
     createNamespace: true
 
-  raichu-vcluster:
+  # raichu vcluster, Raichu Virtual Cluster, Raichu Iodine
+  raichu-iodine:
     sync: 4
     deploy: false
     values: [ "values.yaml", "values.raichu.opal.yaml" ]
