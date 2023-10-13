@@ -37,57 +37,57 @@ apps:
 
   kyverno:
     sync: 1
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   policies:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   metric-server:
     sync: 1
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   reloader:
     sync: 1
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   cert-manager:
     sync: 1
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   external-dns:
     sync: 1
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   cloudflared:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   keda:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   otel-operator:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   cluster-issuer:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   otel-collectors:
     sync: 3
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   nginx:
