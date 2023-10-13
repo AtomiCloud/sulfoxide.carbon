@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.8.0...v1.8.1) (2023-10-13)
+
+
+### 🐛 Bug Fixes
+
+* incorrect ignoreDifferences setup ([731f457](https://github.com/AtomiCloud/sulfoxide.carbon/commit/731f457fbb253cf0dc6235cb1ce1faea28b56eba))
+
 ## [1.8.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.7.0...v1.8.0) (2023-10-08)
 
 
