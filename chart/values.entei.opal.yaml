@@ -38,92 +38,92 @@ apps:
   # Kyverno, Policy Engine, Argon
   argon:
     sync: 1
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Metric Server, Metrics, Xenon
   xenon:
     sync: 1
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Reloader, Reloader, Chlorine
   chlorine:
     sync: 1
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Cert Manager, Certificate Engine, Sulfur
   sulfur:
     sync: 1
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # External DNS, DNS Engine, Tin
   tin:
     sync: 1
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Kyverno Policies, Policies, Sodium
   sodium:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Cloudflared, Internal Ingress, Boron
   boron:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # KEDA, Pod Autoscaler, Iron
   iron:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # OTEL Operator, Observability Engine, Lithium
   lithium:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Cluster Issuer, Certificate Issuer, Zinc
   zinc:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # OTEL Collectors, Observability Agents, Silicon
   silicon:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Nginx, External Ingress, Gold
   gold:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.opal.yaml" ]
     createNamespace: true
 
   # pikachu vcluster, Pikachu Virtual Cluster, Pikachu Iodine
   pikachu-iodine:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pikachu.opal.yaml" ]
     createNamespace: true
 
   # raichu vcluster, Raichu Virtual Cluster, Raichu Iodine
   raichu-iodine:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.raichu.opal.yaml" ]
     createNamespace: true
