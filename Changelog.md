@@ -1,3 +1,10 @@
+## [1.8.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.8.1...v1.8.2) (2023-10-13)
+
+
+### 🐛 Bug Fixes
+
+* deploy everything ([60c98eb](https://github.com/AtomiCloud/sulfoxide.carbon/commit/60c98eb20f010ae4ff2ae859b703fd8f54fe0c0c))
+
 ## [1.8.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.8.0...v1.8.1) (2023-10-13)
 
 
