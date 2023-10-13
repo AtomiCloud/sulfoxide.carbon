@@ -35,6 +35,7 @@ apps:
     serverSideApply: true
     chart: prometheus-operator-crds
 
+  # Kyverno, Policy Engine, Argon
   kyverno:
     sync: 1
     deploy: false
@@ -49,6 +50,7 @@ apps:
     replace: false
     serverSideApply: true
 
+  # Kyverno Policies, Policies, Sodium
   policies:
     sync: 2
     deploy: false
@@ -63,6 +65,7 @@ apps:
     replace: false
     serverSideApply: false
 
+  # Metric Server, Metrics, Xenon
   metric-server:
     sync: 3
     deploy: false
@@ -77,6 +80,7 @@ apps:
     replace: false
     serverSideApply: false
 
+  # Reloader, Reloader, Chlorine
   reloader:
     sync: 3
     deploy: false
@@ -91,6 +95,7 @@ apps:
     replace: false
     serverSideApply: false
 
+  # Cert Manager, Certificate Engine, Sulfur
   cert-manager:
     sync: 3
     deploy: false
@@ -105,6 +110,7 @@ apps:
     replace: false
     serverSideApply: false
 
+  # OTEL Operator, Observability Engine, Lithium
   otel-operator:
     sync: 3
     deploy: false
@@ -119,6 +125,7 @@ apps:
     replace: false
     serverSideApply: false
 
+  # External Secrets, Secrets Engine, Cobalt
   secrets-engine:
     sync: 3
     deploy: false
@@ -133,6 +140,7 @@ apps:
     replace: false
     serverSideApply: false
 
+  # External DNS, DNS Engine, Tin
   external-dns:
     sync: 4
     deploy: false
@@ -147,6 +155,7 @@ apps:
     replace: false
     serverSideApply: false
 
+  # Cloudflared, Internal Ingress, Boron
   cloudflared:
     sync: 4
     deploy: false
@@ -161,6 +170,7 @@ apps:
     replace: false
     serverSideApply: false
 
+  # KEDA, Pod Autoscaler, Iron
   keda:
     sync: 4
     deploy: false
@@ -174,9 +184,15 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: true
+    ignoreDifferences:
+      - group: apiregistration.k8s.io
+        kind: APIService
+        name: "*"
+        namespace: sulfoxide
+        jsonPointers:
+          - /spec/insecureSkipTLSVerify
 
-
-
+  # Cluster Issuer, Certificate Issuer, Zinc
   cluster-issuer:
     sync: 4
     deploy: false
@@ -191,6 +207,7 @@ apps:
     replace: false
     serverSideApply: false
 
+  # OTEL Collectors, Observability Agents, Silicon
   otel-collectors:
     sync: 4
     deploy: false
@@ -205,6 +222,7 @@ apps:
     replace: false
     serverSideApply: false
 
+  # Nginx, External Ingress, Gold
   nginx:
     sync: 5
     deploy: false
@@ -219,20 +237,7 @@ apps:
     replace: false
     serverSideApply: false
 
-  kong:
-    sync: 5
-    deploy: false
-    release: oxygen
-    repo: https://github.com/AtomiCloud/sulfoxide.oxygen
-    version: HEAD
-    path: chart
-    values: ["values.yaml"]
-    namespace: sulfoxide
-    createNamespace: false
-    pruneLast: true
-    replace: false
-    serverSideApply: false
-
+  # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-vcluster:
     sync: 6
     deploy: false
@@ -247,6 +252,7 @@ apps:
     replace: false
     serverSideApply: false
 
+  # pikachu vcluster, Pikachu Virtual Cluster, Pikachu Iodine
   pikachu-vcluster:
     sync: 6
     deploy: false
@@ -261,6 +267,7 @@ apps:
     replace: false
     serverSideApply: false
 
+  # raichu vcluster, Raichu Virtual Cluster, Raichu Iodine
   raichu-vcluster:
     sync: 6
     deploy: false
