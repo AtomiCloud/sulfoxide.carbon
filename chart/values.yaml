@@ -240,7 +240,6 @@ apps:
   iodine-bromine:
     sync: 6
     deploy: false
-    release: bromine
     repo: ghcr.io/atomicloud/sulfoxide.bromine
     chart: sulfoxide-bromine
     version: 1.2.0

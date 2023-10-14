@@ -73,7 +73,6 @@ AtomiCloud Cluster Bootstrap Engine
 | apps.iodine-bromine.deploy | bool | `false` |  |
 | apps.iodine-bromine.namespace | string | `"sulfoxide"` |  |
 | apps.iodine-bromine.pruneLast | bool | `false` |  |
-| apps.iodine-bromine.release | string | `"bromine"` |  |
 | apps.iodine-bromine.replace | bool | `false` |  |
 | apps.iodine-bromine.repo | string | `"ghcr.io/atomicloud/sulfoxide.bromine"` |  |
 | apps.iodine-bromine.serverSideApply | bool | `false` |  |

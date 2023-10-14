@@ -28,7 +28,9 @@ spec:
       parameters: []
       {{- end }}
       passCredentials: false
-      releaseName: {{ $.Values.serviceTree.landscape }}-{{ $v.release }}
+      {{- with $v.release }}
+      releaseName: {{ $.Values.serviceTree.landscape }}-{{ . }}
+      {{- end }}
       skipCrds: false
       valueFiles:
         {{- toYaml $v.values | nindent 8 }}
