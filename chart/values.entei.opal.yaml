@@ -32,25 +32,25 @@ virtualClusters: {}
 apps:
   prometheus:
     sync: 0
-    deploy: true
+    deploy: false
     values: [ "values.yaml" ]
 
   # Kyverno, Policy Engine, Argon
   argon:
     sync: 1
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Metric Server, Metrics, Xenon
   xenon:
     sync: 1
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Reloader, Reloader, Chlorine
   chlorine:
     sync: 1
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Cert Manager, Certificate Engine, Sulfur
