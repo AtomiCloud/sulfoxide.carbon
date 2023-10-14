@@ -1,3 +1,10 @@
+## [1.8.3](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.8.2...v1.8.3) (2023-10-14)
+
+
+### 🐛 Bug Fixes
+
+* remove default project ([1ae3907](https://github.com/AtomiCloud/sulfoxide.carbon/commit/1ae39076a2f40af7990763e2a7b36ca82c989649))
+
 ## [1.8.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.8.1...v1.8.2) (2023-10-13)
 
 
