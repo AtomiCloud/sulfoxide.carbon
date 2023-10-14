@@ -249,7 +249,7 @@ apps:
     createNamespace: false
     pruneLast: false
     replace: false
-    serverSideApply: true
+    serverSideApply: false
 
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
