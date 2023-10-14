@@ -30,7 +30,7 @@ spec:
         {{- toYaml $v.values | nindent 8 }}
       {{ with $v.extraValues }}
       values: |
-        {{- toYaml . | nindent 8 }}
+        {{- . | nindent 8 }}
       {{- end }}
 
     {{- if $v.chart }}
