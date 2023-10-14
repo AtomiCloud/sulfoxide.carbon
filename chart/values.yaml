@@ -250,6 +250,11 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    parameters:
+      - name: rootSecret.ref
+        value: SULFOXIDE_IODINE
+      - name: storeName
+        value: doppler-iodine
 
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:

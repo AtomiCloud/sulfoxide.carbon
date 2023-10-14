@@ -22,16 +22,17 @@ spec:
     {{- end }}
     helm:
       ignoreMissingValueFiles: false
+      {{- if $v.parameters }}
+      parameters: {{- toYaml $v.parameters | nindent 8 }}
+      {{- else }}
       parameters: []
+      {{- end }}
       passCredentials: false
       releaseName: {{ $.Values.serviceTree.landscape }}-{{ $v.release }}
       skipCrds: false
       valueFiles:
         {{- toYaml $v.values | nindent 8 }}
-      {{ with $v.extraValues }}
-      values: |
-        {{- . | nindent 8 }}
-      {{- end }}
+
 
     {{- if $v.chart }}
     chart: {{ $v.chart }}
