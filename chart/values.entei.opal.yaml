@@ -110,7 +110,7 @@ apps:
   # Secrets Store, ExternalSecretStore, Bromine
   bromine:
     sync: 6
-    deploy: true
+    deploy: false
     extraValues: |
       # -- Store name to create
       storeName: doppler-iodine
