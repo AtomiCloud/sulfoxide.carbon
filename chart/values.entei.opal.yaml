@@ -56,49 +56,49 @@ apps:
   # Cert Manager, Certificate Engine, Sulfur
   sulfur:
     sync: 1
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # External DNS, DNS Engine, Tin
   tin:
     sync: 1
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Kyverno Policies, Policies, Sodium
   sodium:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Cloudflared, Internal Ingress, Boron
   boron:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # KEDA, Pod Autoscaler, Iron
   iron:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # OTEL Operator, Observability Engine, Lithium
   lithium:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Cluster Issuer, Certificate Issuer, Zinc
   zinc:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # OTEL Collectors, Observability Agents, Silicon
   silicon:
     sync: 3
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Nginx, External Ingress, Gold
@@ -110,7 +110,7 @@ apps:
   # Secrets Store, ExternalSecretStore, Bromine
   iodine-bromine:
     sync: 6
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
   
 
