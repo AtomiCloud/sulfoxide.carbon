@@ -112,11 +112,8 @@ apps:
     sync: 6
     deploy: true
     extraValues: |
-      # -- Store name to create
       storeName: doppler-iodine
-      # -- Secret of Secrets reference
       rootSecret:
-        # -- DOPPLER Token Reference
         ref: "SULFOXIDE_IODINE"
   
 
