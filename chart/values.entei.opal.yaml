@@ -111,10 +111,7 @@ apps:
   bromine:
     sync: 6
     deploy: true
-    extraValues: |
-      storeName: doppler-iodine
-      rootSecret:
-        ref: "SULFOXIDE_IODINE"
+    values: [ "values.yaml" ]
   
 
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
