@@ -255,6 +255,10 @@ apps:
         value: SULFOXIDE_IODINE
       - name: storeName
         value: doppler-iodine
+      - name: serviceTree.landscape
+        value: entei
+      - name: serviceTree.cluster
+        value: opal
 
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
