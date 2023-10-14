@@ -28,7 +28,7 @@ spec:
       skipCrds: false
       valueFiles:
         {{- toYaml $v.values | nindent 8 }}
-      {{ with $v.secretValues }}
+      {{ with $v.extraValues }}
       values: |
         {{- toYaml . | nindent 8 }}
       {{- end }}

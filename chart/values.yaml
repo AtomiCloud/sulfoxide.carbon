@@ -236,9 +236,24 @@ apps:
     replace: false
     serverSideApply: false
 
+  # Secrets Store, ExternalSecretStore, Bromine
+  bromine:
+    sync: 6
+    deploy: false
+    release: bromine
+    repo: oci://ghcr.io/atomicloud/sulfoxide.bromine
+    chart: sulfoxide-bromine
+    version: 1.1.1
+    values: [ "values.yaml" ]
+    namespace: sulfoxide
+    createNamespace: false
+    pruneLast: true
+    replace: false
+    serverSideApply: false
+
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
-    sync: 6
+    sync: 7
     deploy: false
     release: pichu-iodine
     repo: https://github.com/AtomiCloud/sulfoxide.iodine
@@ -253,7 +268,7 @@ apps:
 
   # pikachu vcluster, Pikachu Virtual Cluster, Pikachu Iodine
   pikachu-iodine:
-    sync: 6
+    sync: 7
     deploy: false
     release: pikachu-iodine
     repo: https://github.com/AtomiCloud/sulfoxide.iodine
@@ -268,7 +283,7 @@ apps:
 
   # raichu vcluster, Raichu Virtual Cluster, Raichu Iodine
   raichu-iodine:
-    sync: 6
+    sync: 7
     deploy: false
     release: raichu-iodine
     repo: https://github.com/AtomiCloud/sulfoxide.iodine
