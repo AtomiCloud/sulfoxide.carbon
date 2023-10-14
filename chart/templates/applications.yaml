@@ -4,14 +4,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: {{ $.Values.serviceTree.landscape }}-{{ $.Values.serviceTree.cluster}}-{{ $k }}
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
   annotations:
     {{- include "sulfoxide-carbon.annotations" $ | nindent 4 }}
     argocd.argoproj.io/sync-wave: "{{ $v.sync }}"
   labels:
     {{- include "sulfoxide-carbon.labels" $ | nindent 4 }}
-    atomi.cloud/bootstrap-type: agnostic
 spec:
   project: {{ $.Values.projectName }}
   source:

@@ -6,7 +6,7 @@ serviceTree:
   layer: "1"
 
 revisionLimit: 3
-projectName: default
+projectName: bootstrap
 destination: https://4236c1de-c493-465a-a5f6-be0535ad3ac1.k8s.ondigitalocean.com
 
 virtualClusters: {}
