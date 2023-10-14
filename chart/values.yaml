@@ -243,22 +243,13 @@ apps:
     release: bromine
     repo: ghcr.io/atomicloud/sulfoxide.bromine
     chart: sulfoxide-bromine
-    version: 1.1.1
+    version: 1.2.0
     values: [ "values.yaml" ]
     namespace: sulfoxide
     createNamespace: false
     pruneLast: false
     replace: false
     serverSideApply: true
-    parameters:
-      - name: rootSecret.ref
-        value: SULFOXIDE_IODINE
-      - name: storeName
-        value: doppler-iodine
-      - name: serviceTree.landscape
-        value: entei
-      - name: serviceTree.cluster
-        value: opal
 
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:

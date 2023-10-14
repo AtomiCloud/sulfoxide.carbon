@@ -111,7 +111,7 @@ apps:
   bromine:
     sync: 6
     deploy: true
-    values: [ "values.yaml" ]
+    values: [ "values.yaml", "values.entei.opal.yaml" ]
   
 
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
