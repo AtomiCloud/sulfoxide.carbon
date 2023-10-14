@@ -110,7 +110,7 @@ apps:
   # Secrets Store, ExternalSecretStore, Bromine
   iodine-bromine:
     sync: 3
-    deploy: true
+    deploy: false
     values: [ "values.yaml" ]
   
 
