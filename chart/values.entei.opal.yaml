@@ -108,9 +108,9 @@ apps:
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Secrets Store, ExternalSecretStore, Bromine
-  bromine:
+  iodine-bromine:
     sync: 6
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
   
 

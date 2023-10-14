@@ -237,7 +237,7 @@ apps:
     serverSideApply: false
 
   # Secrets Store, ExternalSecretStore, Bromine
-  bromine:
+  iodine-bromine:
     sync: 6
     deploy: false
     release: bromine
