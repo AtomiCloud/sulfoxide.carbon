@@ -240,13 +240,14 @@ apps:
   iodine-bromine:
     sync: 6
     deploy: false
-    repo: ghcr.io/atomicloud/sulfoxide.bromine
-    chart: sulfoxide-bromine
-    version: 1.2.0
+    release: iodine-bromine
+    repo: https://github.com/AtomiCloud/sulfoxide.bromine
+    path: chart
+    version: HEAD
     values: [ "values.yaml" ]
     namespace: sulfoxide
     createNamespace: false
-    pruneLast: false
+    pruneLast: true
     replace: false
     serverSideApply: false
 
