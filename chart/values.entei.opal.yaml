@@ -111,7 +111,7 @@ apps:
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
     sync: 4
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.pichu.opal.yaml" ]
     createNamespace: true
 
