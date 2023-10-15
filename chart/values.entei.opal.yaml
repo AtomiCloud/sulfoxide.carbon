@@ -132,6 +132,6 @@ apps:
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   pichu-carbon:
     sync: 5
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.pichu.opal.yaml" ]
     createNamespace: true
