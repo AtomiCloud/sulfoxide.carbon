@@ -1,3 +1,10 @@
+## [1.8.4](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.8.3...v1.8.4) (2023-10-15)
+
+
+### 🐛 Bug Fixes
+
+* incorrect destination ([e51a5a7](https://github.com/AtomiCloud/sulfoxide.carbon/commit/e51a5a71820b7b897f7caf8c998487c628f70d51))
+
 ## [1.8.3](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.8.2...v1.8.3) (2023-10-14)
 
 
