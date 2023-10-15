@@ -295,3 +295,18 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+
+  # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
+  pichu-carbon:
+    sync: 8
+    deploy: false
+    release: pichu-carbon
+    repo: https://github.com/AtomiCloud/sulfoxide.carbon
+    version: HEAD
+    path: chart
+    values: [ "values.yaml" ]
+    namespace: sulfoxide-helium
+    createNamespace: false
+    pruneLast: true
+    replace: false
+    serverSideApply: false

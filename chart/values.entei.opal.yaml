@@ -128,3 +128,10 @@ apps:
     deploy: true
     values: [ "values.yaml", "values.raichu.opal.yaml" ]
     createNamespace: true
+
+  # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
+  pichu-carbon:
+    sync: 5
+    deploy: true
+    values: [ "values.yaml", "values.pichu.opal.yaml" ]
+    createNamespace: true
