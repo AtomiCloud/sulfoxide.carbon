@@ -62,7 +62,7 @@ apps:
   # External DNS, DNS Engine, Tin
   tin:
     sync: 1
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Kyverno Policies, Policies, Sodium
