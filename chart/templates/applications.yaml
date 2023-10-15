@@ -37,7 +37,7 @@ spec:
     chart: {{ $v.chart }}
     {{- end }}
   destination:
-    server: {{ $.Values.destination }}
+    server: {{ $v.destination | default $.Values.destination }}
     namespace: {{ $v.namespace }}
   # Sync policy
   syncPolicy:

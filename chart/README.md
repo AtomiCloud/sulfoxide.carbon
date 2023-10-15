@@ -110,6 +110,7 @@ AtomiCloud Cluster Bootstrap Engine
 | apps.lithium.version | string | `"HEAD"` |  |
 | apps.pichu-carbon.createNamespace | bool | `false` |  |
 | apps.pichu-carbon.deploy | bool | `false` |  |
+| apps.pichu-carbon.destination | string | `"https://kubernetes.default.svc"` |  |
 | apps.pichu-carbon.namespace | string | `"sulfoxide-helium"` |  |
 | apps.pichu-carbon.path | string | `"chart"` |  |
 | apps.pichu-carbon.pruneLast | bool | `true` |  |

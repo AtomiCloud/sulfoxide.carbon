@@ -305,6 +305,7 @@ apps:
     version: HEAD
     path: chart
     values: [ "values.yaml" ]
+    destination: https://kubernetes.default.svc
     namespace: sulfoxide-helium
     createNamespace: false
     pruneLast: true
