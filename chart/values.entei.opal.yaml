@@ -9,30 +9,30 @@ revisionLimit: 3
 projectName: bootstrap
 destination: https://6b830eba-f7a7-4619-83da-a1444b8e9675.k8s.ondigitalocean.com
 
-virtualClusters:
-  pichu:
-    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-    refreshInterval: 1m
-    policy:
-      creation: Owner
-      deletion: Retain
-  pikachu:
-    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-    refreshInterval: 1m
-    policy:
-      creation: Owner
-      deletion: Retain
-  raichu:
-    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-    refreshInterval: 1m
-    policy:
-      creation: Owner
-      deletion: Retain
+virtualClusters: {}
+#  pichu:
+#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+#    refreshInterval: 1m
+#    policy:
+#      creation: Owner
+#      deletion: Retain
+#  pikachu:
+#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+#    refreshInterval: 1m
+#    policy:
+#      creation: Owner
+#      deletion: Retain
+#  raichu:
+#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+#    refreshInterval: 1m
+#    policy:
+#      creation: Owner
+#      deletion: Retain
 
 apps:
   prometheus:
     sync: 0
-    deploy: true
+    deploy: false
     values: [ "values.yaml" ]
 
   # Kyverno, Policy Engine, Argon
