@@ -118,13 +118,13 @@ apps:
   # pikachu vcluster, Pikachu Virtual Cluster, Pikachu Iodine
   pikachu-iodine:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pikachu.opal.yaml" ]
     createNamespace: true
 
   # raichu vcluster, Raichu Virtual Cluster, Raichu Iodine
   raichu-iodine:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.raichu.opal.yaml" ]
     createNamespace: true
