@@ -41,13 +41,13 @@ apps:
   # OTEL Operator, Observability Engine, Lithium
   lithium:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.opal.yaml" ]
 
   # OTEL Collectors, Observability Agents, Silicon
   silicon:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.opal.yaml" ]
 
   # KEDA, Pod Autoscaler, Iron
