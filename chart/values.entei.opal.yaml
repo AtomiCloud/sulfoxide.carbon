@@ -9,13 +9,13 @@ revisionLimit: 3
 projectName: bootstrap
 destination: https://be4dec98-8183-4cc1-8dc8-7c61ee2417c3.k8s.ondigitalocean.com
 
-virtualClusters:
-  pichu:
-    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-    refreshInterval: 1m
-    policy:
-      creation: Owner
-      deletion: Retain
+virtualClusters: {}
+#  pichu:
+#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+#    refreshInterval: 1m
+#    policy:
+#      creation: Owner
+#      deletion: Retain
 #  pikachu:
 #    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
 #    refreshInterval: 1m
@@ -111,27 +111,26 @@ apps:
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
     sync: 4
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.pichu.opal.yaml" ]
-    createNamespace: false
+    createNamespace: true
 
   # pikachu vcluster, Pikachu Virtual Cluster, Pikachu Iodine
   pikachu-iodine:
     sync: 4
     deploy: false
     values: [ "values.yaml", "values.pikachu.opal.yaml" ]
-    createNamespace: false
+    createNamespace: true
 
   # raichu vcluster, Raichu Virtual Cluster, Raichu Iodine
   raichu-iodine:
     sync: 4
     deploy: false
     values: [ "values.yaml", "values.raichu.opal.yaml" ]
-    createNamespace: false
+    createNamespace: true
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   pichu-carbon:
     sync: 5
     deploy: false
     values: [ "values.yaml", "values.pichu.opal.yaml" ]
-    createNamespace: true
