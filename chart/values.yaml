@@ -184,6 +184,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: true
+    respectIgnoreDifferences: true
     ignoreDifferences:
       - group: apiregistration.k8s.io
         kind: APIService

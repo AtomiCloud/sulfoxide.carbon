@@ -22,7 +22,7 @@ spec:
       {{- if $v.parameters }}
       parameters: {{- toYaml $v.parameters | nindent 8 }}
       {{- else }}
-      parameters: []
+      parameters: [ ]
       {{- end }}
       passCredentials: false
       {{- with $v.release }}
@@ -51,6 +51,9 @@ spec:
       - PruneLast={{ $v.pruneLast }} # Allow the ability for resource pruning to happen as a final, implicit wave of a sync operation
       - Replace={{ $v.replace }} # Because kubectl adds metadata that will cross the limit allowed by Kubernetes, Replace overcomes this limitation.
       - ServerSideApply={{ $v.serverSideApply }}
+      {{- if $v.respectIgnoreDifferences }}
+      - RespectIgnoreDifferences={{ $v.respectIgnoreDifferences }}
+      {{- end }}
     retry:
       limit: 10
       backoff:

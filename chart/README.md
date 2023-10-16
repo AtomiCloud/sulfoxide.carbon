@@ -92,6 +92,7 @@ AtomiCloud Cluster Bootstrap Engine
 | apps.iron.release | string | `"iron"` |  |
 | apps.iron.replace | bool | `false` |  |
 | apps.iron.repo | string | `"https://github.com/AtomiCloud/sulfoxide.iron"` |  |
+| apps.iron.respectIgnoreDifferences | bool | `true` |  |
 | apps.iron.serverSideApply | bool | `true` |  |
 | apps.iron.sync | int | `4` |  |
 | apps.iron.values[0] | string | `"values.yaml"` |  |
