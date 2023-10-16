@@ -52,12 +52,12 @@ apps:
   # OTEL Operator, Observability Engine, Lithium
   lithium:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.opal.yaml" ]
 
   # OTEL Collectors, Observability Agents, Silicon
   silicon:
     sync: 5
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.opal.yaml" ]
 
