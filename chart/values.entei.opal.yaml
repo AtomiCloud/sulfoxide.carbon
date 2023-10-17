@@ -9,25 +9,25 @@ revisionLimit: 3
 projectName: bootstrap
 destination: https://1bf760cc-d428-4519-92cc-f69aa10287b0.k8s.ondigitalocean.com
 
-virtualClusters: {}
-#  pichu:
-#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
-#  pikachu:
-#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
-#  raichu:
-#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
+virtualClusters:
+  pichu:
+    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
+  pikachu:
+    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
+  raichu:
+    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
 
 apps:
   prometheus:
@@ -111,21 +111,21 @@ apps:
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.opal.yaml" ]
     createNamespace: false
 
   # pikachu vcluster, Pikachu Virtual Cluster, Pikachu Iodine
   pikachu-iodine:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pikachu.opal.yaml" ]
     createNamespace: false
 
   # raichu vcluster, Raichu Virtual Cluster, Raichu Iodine
   raichu-iodine:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.raichu.opal.yaml" ]
     createNamespace: false
 
