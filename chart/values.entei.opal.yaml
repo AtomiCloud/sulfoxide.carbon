@@ -7,7 +7,7 @@ serviceTree:
 
 revisionLimit: 3
 projectName: bootstrap
-destination: https://be4dec98-8183-4cc1-8dc8-7c61ee2417c3.k8s.ondigitalocean.com
+destination: https://1bf760cc-d428-4519-92cc-f69aa10287b0.k8s.ondigitalocean.com
 
 virtualClusters: {}
 #  pichu:
@@ -32,79 +32,79 @@ virtualClusters: {}
 apps:
   prometheus:
     sync: 0
-    deploy: false
+    deploy: true
     values: [ "values.yaml" ]
 
   # Kyverno, Policy Engine, Argon
   argon:
     sync: 1
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Metric Server, Metrics, Xenon
   xenon:
     sync: 1
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Reloader, Reloader, Chlorine
   chlorine:
     sync: 1
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Cert Manager, Certificate Engine, Sulfur
   sulfur:
     sync: 1
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # External DNS, DNS Engine, Tin
   tin:
     sync: 1
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Kyverno Policies, Policies, Sodium
   sodium:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Cloudflared, Internal Ingress, Boron
   boron:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # KEDA, Pod Autoscaler, Iron
   iron:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # OTEL Operator, Observability Engine, Lithium
   lithium:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Cluster Issuer, Certificate Issuer, Zinc
   zinc:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # OTEL Collectors, Observability Agents, Silicon
   silicon:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Nginx, External Ingress, Gold
   gold:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
 
