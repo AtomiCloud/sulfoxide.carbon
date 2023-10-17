@@ -9,25 +9,25 @@ revisionLimit: 3
 projectName: bootstrap
 destination: https://be4dec98-8183-4cc1-8dc8-7c61ee2417c3.k8s.ondigitalocean.com
 
-virtualClusters:
-  pichu:
-    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-    refreshInterval: 1m
-    policy:
-      creation: Owner
-      deletion: Retain
-  pikachu:
-    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-    refreshInterval: 1m
-    policy:
-      creation: Owner
-      deletion: Retain
-  raichu:
-    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-    refreshInterval: 1m
-    policy:
-      creation: Owner
-      deletion: Retain
+virtualClusters: {}
+#  pichu:
+#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+#    refreshInterval: 1m
+#    policy:
+#      creation: Owner
+#      deletion: Retain
+#  pikachu:
+#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+#    refreshInterval: 1m
+#    policy:
+#      creation: Owner
+#      deletion: Retain
+#  raichu:
+#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+#    refreshInterval: 1m
+#    policy:
+#      creation: Owner
+#      deletion: Retain
 
 apps:
   prometheus:
@@ -86,25 +86,25 @@ apps:
   # OTEL Operator, Observability Engine, Lithium
   lithium:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Cluster Issuer, Certificate Issuer, Zinc
   zinc:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # OTEL Collectors, Observability Agents, Silicon
   silicon:
     sync: 3
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Nginx, External Ingress, Gold
   gold:
     sync: 3
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
 
