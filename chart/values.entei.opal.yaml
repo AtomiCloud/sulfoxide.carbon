@@ -16,18 +16,18 @@ virtualClusters:
     policy:
       creation: Owner
       deletion: Retain
-#  pikachu:
-#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
-#  raichu:
-#    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
+  pikachu:
+    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
+  raichu:
+    apiServerBaseDomain: kubernetes.cluster.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
 
 apps:
   prometheus:
