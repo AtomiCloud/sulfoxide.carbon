@@ -47,7 +47,7 @@ apps:
     namespace: sulfoxide
     createNamespace: false
     pruneLast: true
-    replace: false
+    replace: true
     serverSideApply: true
 
   # Kyverno Policies, Policies, Sodium
