@@ -4,7 +4,7 @@ serviceTree:
 
 revisionLimit: 3
 projectName: bootstrap
-destination: https://pichu.opal.kubernetes.cluster.atomi.cloud
+destination: https://pichu.opal.kubernetes.atomi.cloud
 
 virtualClusters: { }
 
