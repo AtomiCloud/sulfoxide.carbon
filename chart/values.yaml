@@ -312,3 +312,35 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+
+  # pikachu vcluster bootstrap, Pikachu Virtual Cluster Bootstrap, Pikachu Carbon
+  pikachu-carbon:
+    sync: 8
+    deploy: false
+    release: pikachu-carbon
+    repo: https://github.com/AtomiCloud/sulfoxide.carbon
+    version: HEAD
+    path: chart
+    values: [ "values.yaml" ]
+    destination: https://kubernetes.default.svc
+    namespace: sulfoxide-helium
+    createNamespace: false
+    pruneLast: true
+    replace: false
+    serverSideApply: false
+
+  # raichu vcluster bootstrap, Raichu Virtual Cluster Bootstrap, Raichu Carbon
+  raichu-carbon:
+    sync: 8
+    deploy: false
+    release: raichu-carbon
+    repo: https://github.com/AtomiCloud/sulfoxide.carbon
+    version: HEAD
+    path: chart
+    values: [ "values.yaml" ]
+    destination: https://kubernetes.default.svc
+    namespace: sulfoxide-helium
+    createNamespace: false
+    pruneLast: true
+    replace: false
+    serverSideApply: false
