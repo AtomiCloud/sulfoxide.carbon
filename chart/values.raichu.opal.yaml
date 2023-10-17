@@ -1,0 +1,63 @@
+serviceTree:
+  landscape: raichu
+  cluster: opal
+
+revisionLimit: 3
+projectName: bootstrap
+destination: https://raichu.opal.kubernetes.cluster.atomi.cloud
+
+virtualClusters: { }
+
+apps:
+  prometheus:
+    sync: 0
+    deploy: true
+    values: [ "values.yaml" ]
+
+  # Kyverno, Policy Engine, Argon
+  argon:
+    sync: 1
+    deploy: true
+    values: [ "values.yaml", "values.raichu.opal.yaml" ]
+
+  # Kyverno Policies, Policies, Sodium
+  sodium:
+    sync: 2
+    deploy: true
+    values: [ "values.yaml", "values.raichu.opal.yaml" ]
+
+  # Metric Server, Metrics, Xenon
+  xenon:
+    sync: 3
+    deploy: true
+    values: [ "values.yaml", "values.raichu.opal.yaml" ]
+
+  # External Secrets, Secrets Engine, Cobalt
+  cobalt:
+    sync: 3
+    deploy: true
+    values: [ "values.yaml", "values.raichu.opal.yaml" ]
+  # Cert Manager, Certificate Engine, Sulfur
+  sulfur:
+    sync: 3
+    deploy: true
+    values: [ "values.yaml", "values.raichu.opal.yaml" ]
+
+  # KEDA, Pod Autoscaler, Iron
+  iron:
+    sync: 4
+    deploy: true
+    values: [ "values.yaml", "values.raichu.opal.yaml" ]
+
+  # OTEL Operator, Observability Engine, Lithium
+  lithium:
+    sync: 4
+    deploy: true
+    values: [ "values.yaml", "values.raichu.opal.yaml" ]
+
+  # OTEL Collectors, Observability Agents, Silicon
+  silicon:
+    sync: 5
+    deploy: true
+    values: [ "values.yaml", "values.raichu.opal.yaml" ]
+
