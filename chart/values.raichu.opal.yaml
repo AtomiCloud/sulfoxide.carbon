@@ -37,11 +37,18 @@ apps:
     sync: 3
     deploy: true
     values: [ "values.yaml", "values.raichu.opal.yaml" ]
+
   # Cert Manager, Certificate Engine, Sulfur
   sulfur:
     sync: 3
     deploy: true
     values: [ "values.yaml", "values.raichu.opal.yaml" ]
+
+  # Cluster Issuer, Certificate Issuer, Zinc
+  zinc:
+    sync: 4
+    deploy: true
+    values: [ "values.yaml", "values.pichu.opal.yaml" ]
 
   # KEDA, Pod Autoscaler, Iron
   iron:

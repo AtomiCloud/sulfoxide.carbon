@@ -43,6 +43,12 @@ apps:
     deploy: true
     values: [ "values.yaml", "values.pikachu.opal.yaml" ]
 
+  # Cluster Issuer, Certificate Issuer, Zinc
+  zinc:
+    sync: 4
+    deploy: true
+    values: [ "values.yaml", "values.pichu.opal.yaml" ]
+
   # KEDA, Pod Autoscaler, Iron
   iron:
     sync: 4
