@@ -1,3 +1,16 @@
+## [1.9.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.8.4...v1.9.0) (2023-11-18)
+
+
+### 🚀 New Features
+
+* deploy zinc for pichu, pikachu, raichu ([4bf9ec6](https://github.com/AtomiCloud/sulfoxide.carbon/commit/4bf9ec60c3c517e81636a49878a412643aeb2d05))
+* ruby values ([dca01da](https://github.com/AtomiCloud/sulfoxide.carbon/commit/dca01da3dd9c11c81262c0f17e51c08e46b2f29d))
+
+
+### 🐛 Bug Fixes
+
+* incorrect values for pikachu ruby ([612ec7a](https://github.com/AtomiCloud/sulfoxide.carbon/commit/612ec7aa1fae9747894e63fc51f68e3a5adabbd0))
+
 ## [1.8.4](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.8.3...v1.8.4) (2023-10-15)
 
 
