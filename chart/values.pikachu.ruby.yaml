@@ -1,6 +1,6 @@
 serviceTree:
   landscape: pikachu
-  cluster: opal
+  cluster: ruby
 
 revisionLimit: 3
 projectName: bootstrap
