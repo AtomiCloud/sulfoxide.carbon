@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.9.1...v1.9.2) (2023-12-19)
+
+
+### 🐛 Bug Fixes
+
+* missing cluster key in secret target for cluster secrets ([a3006ca](https://github.com/AtomiCloud/sulfoxide.carbon/commit/a3006ca9f48865cefa7f789a8c62299b4fee8a8d))
+
 ## [1.9.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.9.0...v1.9.1) (2023-12-19)
 
 
