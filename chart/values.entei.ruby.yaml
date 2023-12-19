@@ -7,7 +7,7 @@ serviceTree:
 
 revisionLimit: 3
 projectName: bootstrap
-destination: https://03554f79-3c01-496e-974a-6cf3a793914a.k8s.ondigitalocean.com
+destination: ""
 
 virtualClusters:
   pichu:
