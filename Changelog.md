@@ -1,3 +1,10 @@
+## [1.10.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.9.2...v1.10.0) (2023-12-19)
+
+
+### 🚀 New Features
+
+* remove destinoation from values ([0691e58](https://github.com/AtomiCloud/sulfoxide.carbon/commit/0691e580f268ee2ec1487f84fc56cdb309211c33))
+
 ## [1.9.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.9.1...v1.9.2) (2023-12-19)
 
 
