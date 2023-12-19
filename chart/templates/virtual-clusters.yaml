@@ -37,7 +37,7 @@ spec:
     name: {{ $k }}-{{ $.Values.serviceTree.cluster }}
     kind: SecretStore
   target:
-    name: {{ $k }}-cluster-secret
+    name: {{ $k }}-{{ $.Values.serviceTree.cluster }}-cluster-secret
     creationPolicy: {{ $v.policy.creation }}
     deletionPolicy: {{ $v.policy.deletion }}
     template:
