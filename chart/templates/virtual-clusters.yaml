@@ -44,8 +44,10 @@ spec:
       metadata:
         labels: {{- include "sulfoxide-carbon.labels" $ | nindent 10 }}
           argocd.argoproj.io/secret-type: cluster
+          atomi.cloud/cluster-type: virtual
         annotations: {{- include "sulfoxide-carbon.annotations" $ | nindent 10 }}
           argocd.argoproj.io/secret-type: cluster
+          atomi.cloud/cluster-type: virtual
       data:
         name: "{{ $k }}-{{ $.Values.serviceTree.cluster }}"
         server: "https://{{ $k }}.{{ $.Values.serviceTree.cluster }}.{{ $v.apiServerBaseDomain }}"
