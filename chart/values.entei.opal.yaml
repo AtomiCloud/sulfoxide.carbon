@@ -9,7 +9,7 @@ revisionLimit: 3
 projectName: bootstrap
 destination: ""
 
-enableAppSet: true
+enableAppSet: "true"
 virtualClusters:
   pichu:
     apiServerBaseDomain: kubernetes.atomi.cloud
