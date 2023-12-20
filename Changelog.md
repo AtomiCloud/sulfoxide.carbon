@@ -1,3 +1,10 @@
+## [1.11.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.10.0...v1.11.0) (2023-12-20)
+
+
+### 🚀 New Features
+
+* label cluster access to have virtual ([7075793](https://github.com/AtomiCloud/sulfoxide.carbon/commit/70757935ec4ae9366e9d3ac4f9bd5d10e8eb0d06))
+
 ## [1.10.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.9.2...v1.10.0) (2023-12-19)
 
 
