@@ -1,3 +1,10 @@
+## [1.14.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.13.1...v1.14.0) (2023-12-20)
+
+
+### 🚀 New Features
+
+* label to decide radon's deployment ([a244656](https://github.com/AtomiCloud/sulfoxide.carbon/commit/a244656ea2cc11494025001c41a11c1538ef8694))
+
 ## [1.13.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.13.0...v1.13.1) (2023-12-20)
 
 
