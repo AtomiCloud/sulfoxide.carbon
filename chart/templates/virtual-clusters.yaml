@@ -46,10 +46,12 @@ spec:
           argocd.argoproj.io/secret-type: cluster
           atomi.cloud/cluster-type: virtual
           atomi.cloud/cluster-landscape: {{ $k }}
+          atomi.cloud/revision-prefix: "{{ $v.revisionPrefix}}"
         annotations: {{- include "sulfoxide-carbon.annotations" $ | nindent 10 }}
           argocd.argoproj.io/secret-type: cluster
           atomi.cloud/cluster-type: virtual
           atomi.cloud/cluster-landscape: {{ $k }}
+          atomi.cloud/revision-prefix: "{{ $v.revisionPrefix}}"
       data:
         name: "{{ $k }}-{{ $.Values.serviceTree.cluster }}"
         server: "https://{{ $k }}.{{ $.Values.serviceTree.cluster }}.{{ $v.apiServerBaseDomain }}"
