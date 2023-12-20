@@ -1,3 +1,10 @@
+## [1.12.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.11.0...v1.12.0) (2023-12-20)
+
+
+### 🚀 New Features
+
+* landscape label for clsuter access secrets ([f3403dc](https://github.com/AtomiCloud/sulfoxide.carbon/commit/f3403dcdb5e5619e19944698b3d5b23475c0b7e0))
+
 ## [1.11.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.10.0...v1.11.0) (2023-12-20)
 
 
