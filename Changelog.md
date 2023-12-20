@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.14.0...v1.14.1) (2023-12-20)
+
+
+### 🐛 Bug Fixes
+
+* convert appset to string ([fcbf799](https://github.com/AtomiCloud/sulfoxide.carbon/commit/fcbf79970a749b44a9ae8a33cfe41ca6775ffed7))
+
 ## [1.14.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.13.1...v1.14.0) (2023-12-20)
 
 
