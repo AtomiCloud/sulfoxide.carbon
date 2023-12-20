@@ -46,6 +46,7 @@ spec:
           argocd.argoproj.io/secret-type: cluster
           atomi.cloud/cluster-type: virtual
           atomi.cloud/cluster-landscape: {{ $k }}
+          atomi.cloud/enable-appset: "{{ $.Values.enableAppSet}}"
         annotations: {{- include "sulfoxide-carbon.annotations" $ | nindent 10 }}
           argocd.argoproj.io/secret-type: cluster
           atomi.cloud/cluster-type: virtual
