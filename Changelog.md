@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.13.0...v1.13.1) (2023-12-20)
+
+
+### 🐛 Bug Fixes
+
+* remove template prefix ([721c6ea](https://github.com/AtomiCloud/sulfoxide.carbon/commit/721c6ea87c8214e0fe6bdcfa365aecea1c1ad103))
+
 ## [1.13.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.12.0...v1.13.0) (2023-12-20)
 
 
