@@ -1,3 +1,10 @@
+## [1.13.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.12.0...v1.13.0) (2023-12-20)
+
+
+### 🚀 New Features
+
+* add revision prefix for virtual clusters ([f57814b](https://github.com/AtomiCloud/sulfoxide.carbon/commit/f57814bfc55c6ce748361e83a6eabb4f698c89d3))
+
 ## [1.12.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.11.0...v1.12.0) (2023-12-20)
 
 
