@@ -1,3 +1,10 @@
+## [1.14.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.14.1...v1.14.2) (2024-02-08)
+
+
+### 🐛 Bug Fixes
+
+* releaser ([f93611a](https://github.com/AtomiCloud/sulfoxide.carbon/commit/f93611a2f7026ce24b6c98c751fa80deccccf1f8))
+
 ## [1.14.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.14.0...v1.14.1) (2023-12-20)
 
 
