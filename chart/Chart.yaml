@@ -2,5 +2,5 @@ apiVersion: v2
 name: sulfoxide-carbon
 description: AtomiCloud Cluster Bootstrap Engine
 type: application
-version: 1.14.2
+version: 1.15.0
 appVersion: "0.1.0"

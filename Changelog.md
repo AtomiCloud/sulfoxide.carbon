@@ -1,3 +1,10 @@
+## [1.15.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.14.2...v1.15.0) (2024-02-08)
+
+
+### 📦 Upstreams Changes
+
+* flake ([59fd3fe](https://github.com/AtomiCloud/sulfoxide.carbon/commit/59fd3fe357e7ecc9b1a304cba56f5630956ed35c))
+
 ## [1.14.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.14.1...v1.14.2) (2024-02-08)
 
 
