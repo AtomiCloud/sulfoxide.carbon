@@ -1,0 +1,70 @@
+serviceTree:
+  landscape: raichu
+  cluster: onyx
+
+revisionLimit: 3
+projectName: bootstrap
+destination: https://raichu.onyx.kubernetes.atomi.cloud
+
+virtualClusters: { }
+
+apps:
+  prometheus:
+    sync: 0
+    deploy: true
+    values: [ "values.yaml" ]
+
+  # Kyverno, Policy Engine, Argon
+  argon:
+    sync: 1
+    deploy: true
+    values: [ "values.yaml", "values.raichu.onyx.yaml" ]
+
+  # Kyverno Policies, Policies, Sodium
+  sodium:
+    sync: 2
+    deploy: true
+    values: [ "values.yaml", "values.raichu.onyx.yaml" ]
+
+  # Metric Server, Metrics, Xenon
+  xenon:
+    sync: 3
+    deploy: true
+    values: [ "values.yaml", "values.raichu.onyx.yaml" ]
+
+  # External Secrets, Secrets Engine, Cobalt
+  cobalt:
+    sync: 3
+    deploy: true
+    values: [ "values.yaml", "values.raichu.onyx.yaml" ]
+
+  # Cert Manager, Certificate Engine, Sulfur
+  sulfur:
+    sync: 3
+    deploy: true
+    values: [ "values.yaml", "values.raichu.onyx.yaml" ]
+
+  # Cluster Issuer, Certificate Issuer, Zinc
+  zinc:
+    sync: 4
+    deploy: false
+    values: [ "values.yaml", "values.pichu.onyx.yaml" ]
+
+  # KEDA, Pod Autoscaler, Iron
+  iron:
+    sync: 4
+    deploy: true
+    values: [ "values.yaml", "values.raichu.onyx.yaml" ]
+
+  # OTEL Operator, Observability Engine, Lithium
+  lithium:
+    sync: 4
+    deploy: true
+    values: [ "values.yaml", "values.raichu.onyx.yaml" ]
+
+  # OTEL Collectors, Observability Agents, Silicon
+  silicon:
+    sync: 5
+    deploy: true
+    values: [ "values.yaml", "values.raichu.onyx.yaml" ]
+
