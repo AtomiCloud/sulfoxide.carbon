@@ -36,114 +36,120 @@ apps:
     deploy: true
     values: [ "values.yaml" ]
 
+  # EKS Drivers, EKS Drivers, Lead
+  lead:
+    sync: 1
+    deploy: true
+    values: [ "values.yaml", "values.entei.onyx.yaml" ]
+
   # Kyverno, Policy Engine, Argon
   argon:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # Metric Server, Metrics, Xenon
   xenon:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # Reloader, Reloader, Chlorine
   chlorine:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # Cert Manager, Certificate Engine, Sulfur
   sulfur:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # External DNS, DNS Engine, Tin
   tin:
     sync: 2
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # Kyverno Policies, Policies, Sodium
   sodium:
     sync: 3
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # Cloudflared, Internal Ingress, Boron
   boron:
     sync: 3
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # KEDA, Pod Autoscaler, Iron
   iron:
     sync: 3
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # OTEL Operator, Observability Engine, Lithium
   lithium:
     sync: 3
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # Cluster Issuer, Certificate Issuer, Zinc
   zinc:
     sync: 3
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # OTEL Collectors, Observability Agents, Silicon
   silicon:
     sync: 4
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # Nginx, External Ingress, Gold
   gold:
     sync: 4
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
 
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
     sync: 5
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.pichu.onyx.yaml" ]
     createNamespace: true
 
   # pikachu vcluster, Pikachu Virtual Cluster, Pikachu Iodine
   pikachu-iodine:
     sync: 5
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.pikachu.onyx.yaml" ]
     createNamespace: true
 
   # raichu vcluster, Raichu Virtual Cluster, Raichu Iodine
   raichu-iodine:
     sync: 5
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.raichu.onyx.yaml" ]
     createNamespace: true
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   pichu-carbon:
     sync: 6
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.pichu.onyx.yaml" ]
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   pikachu-carbon:
     sync: 6
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.pikachu.onyx.yaml" ]
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   raichu-carbon:
     sync: 6
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.raichu.onyx.yaml" ]

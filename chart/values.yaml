@@ -35,6 +35,36 @@ apps:
     serverSideApply: true
     chart: prometheus-operator-crds
 
+  # Karpenter, Cluster Autoscaler, Krypton
+  krypton:
+    sync: 1
+    deploy: false
+    release: krypton
+    repo: https://github.com/AtomiCloud/sulfoxide.krypton
+    version: HEAD
+    path: "chart"
+    values: ["values.yaml" ]
+    namespace: kube-system
+    createNamespace: false
+    pruneLast: true
+    replace: false
+    serverSideApply: false
+
+  # EKS Drivers, EKS Drivers, Lead
+  lead:
+    sync: 1
+    deploy: false
+    release: lead
+    repo: https://github.com/AtomiCloud/sulfoxide.lead
+    version: HEAD
+    path: "chart"
+    values: ["values.yaml" ]
+    namespace: sulfoxide
+    createNamespace: false
+    pruneLast: true
+    replace: false
+    serverSideApply: false
+
   # Kyverno, Policy Engine, Argon
   argon:
     sync: 1
