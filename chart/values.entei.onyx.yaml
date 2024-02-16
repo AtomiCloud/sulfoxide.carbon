@@ -45,73 +45,73 @@ apps:
   # Kyverno, Policy Engine, Argon
   argon:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # Metric Server, Metrics, Xenon
   xenon:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # Reloader, Reloader, Chlorine
   chlorine:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # Cert Manager, Certificate Engine, Sulfur
   sulfur:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # External DNS, DNS Engine, Tin
   tin:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # Kyverno Policies, Policies, Sodium
   sodium:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # Cloudflared, Internal Ingress, Boron
   boron:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # KEDA, Pod Autoscaler, Iron
   iron:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # OTEL Operator, Observability Engine, Lithium
   lithium:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # Cluster Issuer, Certificate Issuer, Zinc
   zinc:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # OTEL Collectors, Observability Agents, Silicon
   silicon:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
   # Nginx, External Ingress, Gold
   gold:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
 
