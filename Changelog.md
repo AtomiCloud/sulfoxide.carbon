@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.15.0...v1.15.1) (2024-02-16)
+
+
+### 🐛 Bug Fixes
+
+* **entei-onyx:** xenon on sulfoxide as kube-system on fargate ([0d1f646](https://github.com/AtomiCloud/sulfoxide.carbon/commit/0d1f646778b1e0219a8664a324f98684a3d14f73))
+
 ## [1.15.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.14.2...v1.15.0) (2024-02-08)
 
 
