@@ -51,6 +51,7 @@ apps:
   # Metric Server, Metrics, Xenon
   xenon:
     sync: 2
+    namespace: sulfoxide
     deploy: true
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
