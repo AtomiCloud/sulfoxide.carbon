@@ -112,7 +112,7 @@ apps:
   # Nginx, External Ingress, Gold
   gold:
     sync: 4
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
 
 
