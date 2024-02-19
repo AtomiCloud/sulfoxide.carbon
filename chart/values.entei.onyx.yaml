@@ -112,9 +112,8 @@ apps:
   # Nginx, External Ingress, Gold
   gold:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.onyx.yaml" ]
-
 
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
