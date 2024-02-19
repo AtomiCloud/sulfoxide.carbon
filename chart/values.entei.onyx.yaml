@@ -119,7 +119,7 @@ apps:
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
     sync: 5
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.onyx.yaml" ]
     createNamespace: false
 
