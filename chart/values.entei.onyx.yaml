@@ -10,25 +10,25 @@ projectName: bootstrap
 destination: ""
 
 enableAppSet: "true"
-virtualClusters: {}
-#  pichu:
-#    apiServerBaseDomain: kubernetes.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
-#  pikachu:
-#    apiServerBaseDomain: kubernetes.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
-#  raichu:
-#    apiServerBaseDomain: kubernetes.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
+virtualClusters:
+  pichu:
+    apiServerBaseDomain: kubernetes.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
+  pikachu:
+    apiServerBaseDomain: kubernetes.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
+  raichu:
+    apiServerBaseDomain: kubernetes.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
 
 apps:
   prometheus:
@@ -126,14 +126,14 @@ apps:
   # pikachu vcluster, Pikachu Virtual Cluster, Pikachu Iodine
   pikachu-iodine:
     sync: 5
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pikachu.onyx.yaml" ]
     createNamespace: true
 
   # raichu vcluster, Raichu Virtual Cluster, Raichu Iodine
   raichu-iodine:
     sync: 5
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.raichu.onyx.yaml" ]
     createNamespace: true
 
