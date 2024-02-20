@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.15.1...v1.15.2) (2024-02-20)
+
+
+### 🐛 Bug Fixes
+
+* enable createNamespace ([d15dd07](https://github.com/AtomiCloud/sulfoxide.carbon/commit/d15dd070d396fe6ffa9423056678f047e5d43cc2))
+
 ## [1.15.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.15.0...v1.15.1) (2024-02-16)
 
 
