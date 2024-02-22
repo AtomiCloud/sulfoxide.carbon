@@ -11,7 +11,7 @@ virtualClusters: { }
 apps:
   prometheus:
     sync: 0
-    deploy: false
+    deploy: true
     values: [ "values.yaml" ]
 
   # Kyverno, Policy Engine, Argon
