@@ -17,7 +17,7 @@ apps:
   # Kyverno, Policy Engine, Argon
   argon:
     sync: 1
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.onyx.yaml" ]
 
   # Kyverno Policies, Policies, Sodium
