@@ -4,14 +4,14 @@ serviceTree:
 
 revisionLimit: 3
 projectName: bootstrap
-destination: https://pichu.opal.kubernetes.atomi.cloud
+destination: https://pichu.onyx.kubernetes.atomi.cloud
 
 virtualClusters: { }
 
 apps:
   prometheus:
     sync: 0
-    deploy: true
+    deploy: false
     values: [ "values.yaml" ]
 
   # Kyverno, Policy Engine, Argon
