@@ -1,3 +1,10 @@
+## [1.15.3](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.15.2...v1.15.3) (2024-02-22)
+
+
+### 🐛 Bug Fixes
+
+* incorrect cluster destination ([041d3ca](https://github.com/AtomiCloud/sulfoxide.carbon/commit/041d3caf654887a0bc9be80aee66e1a2f7e7db71))
+
 ## [1.15.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.15.1...v1.15.2) (2024-02-20)
 
 
