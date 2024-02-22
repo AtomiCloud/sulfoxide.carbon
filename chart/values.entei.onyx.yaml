@@ -157,11 +157,11 @@ apps:
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   pikachu-carbon:
     sync: 6
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pikachu.onyx.yaml" ]
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   raichu-carbon:
     sync: 6
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.raichu.onyx.yaml" ]
