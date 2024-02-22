@@ -23,47 +23,47 @@ apps:
   # Kyverno Policies, Policies, Sodium
   sodium:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.onyx.yaml" ]
 
   # Metric Server, Metrics, Xenon
   xenon:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.onyx.yaml" ]
 
   # External Secrets, Secrets Engine, Cobalt
   cobalt:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.onyx.yaml" ]
   # Cert Manager, Certificate Engine, Sulfur
   sulfur:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.onyx.yaml" ]
 
   # Cluster Issuer, Certificate Issuer, Zinc
   zinc:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.onyx.yaml" ]
 
   # KEDA, Pod Autoscaler, Iron
   iron:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.onyx.yaml" ]
 
   # OTEL Operator, Observability Engine, Lithium
   lithium:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.onyx.yaml" ]
 
   # OTEL Collectors, Observability Agents, Silicon
   silicon:
     sync: 5
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.onyx.yaml" ]
 
