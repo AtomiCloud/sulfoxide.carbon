@@ -34,6 +34,7 @@ apps:
     replace: true
     serverSideApply: true
     chart: prometheus-operator-crds
+    autoSync: true
 
   # Karpenter, Cluster Autoscaler, Krypton
   krypton:
@@ -49,6 +50,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # EKS Drivers, EKS Drivers, Lead
   lead:
@@ -64,6 +66,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # Kyverno, Policy Engine, Argon
   argon:
@@ -79,6 +82,7 @@ apps:
     pruneLast: true
     replace: true
     serverSideApply: true
+    autoSync: true
 
   # Kyverno Policies, Policies, Sodium
   sodium:
@@ -94,6 +98,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # Metric Server, Metrics, Xenon
   xenon:
@@ -109,6 +114,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # Reloader, Reloader, Chlorine
   chlorine:
@@ -124,6 +130,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # Cert Manager, Certificate Engine, Sulfur
   sulfur:
@@ -139,6 +146,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # OTEL Operator, Observability Engine, Lithium
   lithium:
@@ -154,6 +162,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # External Secrets, Secrets Engine, Cobalt
   cobalt:
@@ -169,6 +178,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # External DNS, DNS Engine, Tin
   tin:
@@ -184,6 +194,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # Cloudflared, Internal Ingress, Boron
   boron:
@@ -199,6 +210,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # KEDA, Pod Autoscaler, Iron
   iron:
@@ -215,6 +227,7 @@ apps:
     replace: false
     serverSideApply: true
     respectIgnoreDifferences: true
+    autoSync: true
     ignoreDifferences:
       - group: apiregistration.k8s.io
         kind: APIService
@@ -236,6 +249,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # OTEL Collectors, Observability Agents, Silicon
   silicon:
@@ -251,6 +265,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # Nginx, External Ingress, Gold
   gold:
@@ -266,6 +281,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # Secrets Store, ExternalSecretStore, Bromine
   iodine-bromine:
@@ -281,6 +297,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
@@ -296,6 +313,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: false
 
   # pikachu vcluster, Pikachu Virtual Cluster, Pikachu Iodine
   pikachu-iodine:
@@ -311,6 +329,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: false
 
   # raichu vcluster, Raichu Virtual Cluster, Raichu Iodine
   raichu-iodine:
@@ -326,6 +345,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: false
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   pichu-carbon:
@@ -342,6 +362,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # pikachu vcluster bootstrap, Pikachu Virtual Cluster Bootstrap, Pikachu Carbon
   pikachu-carbon:
@@ -358,6 +379,7 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
 
   # raichu vcluster bootstrap, Raichu Virtual Cluster Bootstrap, Raichu Carbon
   raichu-carbon:
@@ -374,3 +396,4 @@ apps:
     pruneLast: true
     replace: false
     serverSideApply: false
+    autoSync: true
