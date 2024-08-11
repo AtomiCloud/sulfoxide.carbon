@@ -1,0 +1,69 @@
+serviceTree:
+  landscape: pichu
+  cluster: topaz
+
+revisionLimit: 3
+projectName: bootstrap
+destination: https://pichu.topaz.kubernetes.atomi.cloud
+
+virtualClusters: { }
+
+apps:
+  prometheus:
+    sync: 0
+    deploy: true
+    values: [ "values.yaml" ]
+
+  # Kyverno, Policy Engine, Argon
+  argon:
+    sync: 1
+    deploy: true
+    values: [ "values.yaml", "values.pichu.topaz.yaml" ]
+
+  # Kyverno Policies, Policies, Sodium
+  sodium:
+    sync: 2
+    deploy: true
+    values: [ "values.yaml", "values.pichu.topaz.yaml" ]
+
+  # Metric Server, Metrics, Xenon
+  xenon:
+    sync: 3
+    deploy: true
+    values: [ "values.yaml", "values.pichu.topaz.yaml" ]
+
+  # External Secrets, Secrets Engine, Cobalt
+  cobalt:
+    sync: 3
+    deploy: true
+    values: [ "values.yaml", "values.pichu.topaz.yaml" ]
+  # Cert Manager, Certificate Engine, Sulfur
+  sulfur:
+    sync: 3
+    deploy: true
+    values: [ "values.yaml", "values.pichu.topaz.yaml" ]
+
+  # Cluster Issuer, Certificate Issuer, Zinc
+  zinc:
+    sync: 4
+    deploy: true
+    values: [ "values.yaml", "values.pichu.topaz.yaml" ]
+
+  # KEDA, Pod Autoscaler, Iron
+  iron:
+    sync: 4
+    deploy: true
+    values: [ "values.yaml", "values.pichu.topaz.yaml" ]
+
+  # OTEL Operator, Observability Engine, Lithium
+  lithium:
+    sync: 4
+    deploy: true
+    values: [ "values.yaml", "values.pichu.topaz.yaml" ]
+
+  # OTEL Collectors, Observability Agents, Silicon
+  silicon:
+    sync: 5
+    deploy: true
+    values: [ "values.yaml", "values.pichu.topaz.yaml" ]
+
