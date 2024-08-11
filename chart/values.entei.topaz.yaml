@@ -51,80 +51,80 @@ apps:
   # EKS Drivers, EKS Drivers, Lead
   lead:
     sync: 1
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.topaz.yaml" ]
 
   # Kyverno, Policy Engine, Argon
   argon:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.topaz.yaml" ]
 
   # Metric Server, Metrics, Xenon
   xenon:
     sync: 2
     namespace: sulfoxide
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.topaz.yaml" ]
 
   # Reloader, Reloader, Chlorine
   chlorine:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.topaz.yaml" ]
 
   # Cert Manager, Certificate Engine, Sulfur
   sulfur:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.topaz.yaml" ]
 
   # External DNS, DNS Engine, Tin
   tin:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.topaz.yaml" ]
 
   # Kyverno Policies, Policies, Sodium
   sodium:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.topaz.yaml" ]
 
   # Cloudflared, Internal Ingress, Boron
   boron:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.topaz.yaml" ]
 
   # KEDA, Pod Autoscaler, Iron
   iron:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.topaz.yaml" ]
 
   # OTEL Operator, Observability Engine, Lithium
   lithium:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.topaz.yaml" ]
 
   # Cluster Issuer, Certificate Issuer, Zinc
   zinc:
     sync: 3
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.topaz.yaml" ]
 
   # OTEL Collectors, Observability Agents, Silicon
   silicon:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.topaz.yaml" ]
 
   # Nginx, External Ingress, Gold
   gold:
     sync: 4
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.topaz.yaml" ]
 
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
