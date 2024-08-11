@@ -45,7 +45,7 @@ apps:
   # External Secrets, Secrets Engine, Cobalt
   cobalt:
     sync: 1
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.entei.topaz.yaml" ]
 
   # EKS Drivers, EKS Drivers, Lead
