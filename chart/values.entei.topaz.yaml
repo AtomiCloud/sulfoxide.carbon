@@ -10,13 +10,13 @@ projectName: bootstrap
 destination: ""
 
 enableAppSet: "true"
-virtualClusters: {}
-#  pichu:
-#    apiServerBaseDomain: kubernetes.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
+virtualClusters:
+  pichu:
+    apiServerBaseDomain: kubernetes.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
 #  pikachu:
 #    apiServerBaseDomain: kubernetes.atomi.cloud
 #    refreshInterval: 1m
@@ -130,7 +130,7 @@ apps:
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
     sync: 5
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.topaz.yaml" ]
     createNamespace: true
 
