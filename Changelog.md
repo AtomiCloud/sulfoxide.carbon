@@ -1,3 +1,10 @@
+## [1.16.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.15.3...v1.16.0) (2024-08-11)
+
+
+### 📦 Upstreams Changes
+
+* upgrade nix, helm upstream, GHA ([2ab7c9b](https://github.com/AtomiCloud/sulfoxide.carbon/commit/2ab7c9b49b97f3825ec3e67c7fbc3a1be4487b92))
+
 ## [1.15.3](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.15.2...v1.15.3) (2024-02-22)
 
 
