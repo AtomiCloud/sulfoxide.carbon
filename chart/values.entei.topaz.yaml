@@ -10,25 +10,25 @@ projectName: bootstrap
 destination: ""
 
 enableAppSet: "true"
-virtualClusters: {}
-#  pichu:
-#    apiServerBaseDomain: kubernetes.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
-#  pikachu:
-#    apiServerBaseDomain: kubernetes.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
-#  raichu:
-#    apiServerBaseDomain: kubernetes.atomi.cloud
-#    refreshInterval: 1m
-#    policy:
-#      creation: Owner
-#      deletion: Retain
+virtualClusters:
+  pichu:
+    apiServerBaseDomain: kubernetes.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
+  pikachu:
+    apiServerBaseDomain: kubernetes.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
+  raichu:
+    apiServerBaseDomain: kubernetes.atomi.cloud
+    refreshInterval: 1m
+    policy:
+      creation: Owner
+      deletion: Retain
 
 apps:
   prometheus:
@@ -130,38 +130,38 @@ apps:
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
     sync: 5
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.topaz.yaml" ]
     createNamespace: true
 
   # pikachu vcluster, Pikachu Virtual Cluster, Pikachu Iodine
   pikachu-iodine:
     sync: 5
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pikachu.topaz.yaml" ]
     createNamespace: true
 
   # raichu vcluster, Raichu Virtual Cluster, Raichu Iodine
   raichu-iodine:
     sync: 5
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.raichu.topaz.yaml" ]
     createNamespace: true
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   pichu-carbon:
     sync: 6
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pichu.topaz.yaml" ]
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   pikachu-carbon:
     sync: 6
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.pikachu.topaz.yaml" ]
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   raichu-carbon:
     sync: 6
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.raichu.topaz.yaml" ]
