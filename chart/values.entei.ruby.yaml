@@ -12,18 +12,24 @@ destination: ""
 enableAppSet: "true"
 virtualClusters:
   pichu:
+    deploy: true
+    sync: 5
     apiServerBaseDomain: kubernetes.atomi.cloud
     refreshInterval: 1m
     policy:
       creation: Owner
       deletion: Retain
   pikachu:
+    deploy: true
+    sync: 5
     apiServerBaseDomain: kubernetes.atomi.cloud
     refreshInterval: 1m
     policy:
       creation: Owner
       deletion: Retain
   raichu:
+    deploy: true
+    sync: 5
     apiServerBaseDomain: kubernetes.atomi.cloud
     refreshInterval: 1m
     policy:
