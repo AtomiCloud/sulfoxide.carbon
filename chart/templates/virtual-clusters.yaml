@@ -33,7 +33,7 @@ metadata:
 spec:
   refreshInterval: {{ $v.refreshInterval }}
   secretStoreRef:
-    name: {{ $k }}-{{ $.Values.serviceTree.cluster }}
+    name: phase-{{ $v.sync }}-{{ $k }}-{{ $.Values.serviceTree.cluster }}
     kind: SecretStore
   target:
     name: {{ $k }}-{{ $.Values.serviceTree.cluster }}-cluster-secret
