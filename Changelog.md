@@ -1,3 +1,10 @@
+## [1.17.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.16.0...v1.17.0) (2024-08-17)
+
+
+### 🚀 New Features
+
+* migrate to append sync-wave to application ([f6a5752](https://github.com/AtomiCloud/sulfoxide.carbon/commit/f6a5752251cc22e86ae2de4ddd618405de250206))
+
 ## [1.16.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.15.3...v1.16.0) (2024-08-11)
 
 
