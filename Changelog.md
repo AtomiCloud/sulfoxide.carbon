@@ -1,3 +1,10 @@
+## [1.17.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.17.0...v1.17.1) (2024-08-17)
+
+
+### 🐛 Bug Fixes
+
+* missing sync wave for external secret ([32806f3](https://github.com/AtomiCloud/sulfoxide.carbon/commit/32806f3138551132903270703039e043aee4b0f0))
+
 ## [1.17.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.16.0...v1.17.0) (2024-08-17)
 
 
