@@ -26,10 +26,9 @@ spec:
 apiVersion: external-secrets.io/v1beta1
 kind: ExternalSecret
 metadata:
-  name: {{ $k }}-{{ $.Values.serviceTree.cluster }}-cluster-secret
+  name: phase-{{ $v.sync }}-{{ $k }}-{{ $.Values.serviceTree.cluster }}-cluster-secret
   annotations: {{- include "sulfoxide-carbon.annotations" $ | nindent 4 }}
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-weight: "1"
+    argocd.argoproj.io/sync-wave: "{{ $v.sync }}"
   labels: {{- include "sulfoxide-carbon.labels" $ | nindent 4 }}
 spec:
   refreshInterval: {{ $v.refreshInterval }}
