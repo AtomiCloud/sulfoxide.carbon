@@ -1,3 +1,10 @@
+## [1.17.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.17.1...v1.17.2) (2024-08-17)
+
+
+### 🐛 Bug Fixes
+
+* upgrade all clusters ([c5e69f5](https://github.com/AtomiCloud/sulfoxide.carbon/commit/c5e69f5845268afd6bc4fc9d19e807dabf648918))
+
 ## [1.17.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.17.0...v1.17.1) (2024-08-17)
 
 
