@@ -3,7 +3,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ $.Values.serviceTree.landscape }}-{{ $.Values.serviceTree.cluster}}-{{ $k }}
+  name: phase-{{ $v.sync}}-{{ $.Values.serviceTree.landscape }}-{{ $.Values.serviceTree.cluster}}-{{ $k }}
   annotations:
     {{- include "sulfoxide-carbon.annotations" $ | nindent 4 }}
     argocd.argoproj.io/sync-wave: "{{ $v.sync }}"

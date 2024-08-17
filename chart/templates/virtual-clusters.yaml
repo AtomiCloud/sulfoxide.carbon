@@ -1,11 +1,11 @@
 {{- range $k, $v := .Values.virtualClusters }}
+{{- if $v.deploy }}
 apiVersion: external-secrets.io/v1beta1
 kind: SecretStore
 metadata:
-  name: {{ $k }}-{{ $.Values.serviceTree.cluster }}
+  name: phase-{{ $v.sync }}-{{ $k }}-{{ $.Values.serviceTree.cluster }}
   annotations: {{- include "sulfoxide-carbon.annotations" $ | nindent 4 }}
-    "helm.sh/hook": post-install, post-upgrade
-    "helm.sh/hook-weight": "1"
+    argocd.argoproj.io/sync-wave: "{{ $v.sync }}"
   labels: {{- include "sulfoxide-carbon.labels" $ | nindent 4 }}
 spec:
   provider:
@@ -76,5 +76,6 @@ spec:
       remoteRef:
         key: "vc-{{ $.Values.serviceTree.landscape }}-{{ $k }}-iodine"
         property: client-key
+{{- end }}
 ---
 {{- end }}

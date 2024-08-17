@@ -12,6 +12,8 @@ destination: https://kubernetes.api
 
 virtualClusters: {}
 #  pichu:
+#    deploy: true
+#    sync: 6
 #    refreshInterval: 1m
 #    store:
 #      name: entei-opal

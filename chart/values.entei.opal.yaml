@@ -12,18 +12,24 @@ destination: ""
 enableAppSet: "true"
 virtualClusters:
   pichu:
+    deploy: true
+    sync: 5
     apiServerBaseDomain: kubernetes.atomi.cloud
     refreshInterval: 1m
     policy:
       creation: Owner
       deletion: Retain
   pikachu:
+    deploy: true
+    sync: 5
     apiServerBaseDomain: kubernetes.atomi.cloud
     refreshInterval: 1m
     policy:
       creation: Owner
       deletion: Retain
   raichu:
+    deploy: true
+    sync: 5
     apiServerBaseDomain: kubernetes.atomi.cloud
     refreshInterval: 1m
     policy:
@@ -138,18 +144,18 @@ apps:
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   pichu-carbon:
-    sync: 5
+    sync: 6
     deploy: true
     values: [ "values.yaml", "values.pichu.opal.yaml" ]
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   pikachu-carbon:
-    sync: 5
+    sync: 6
     deploy: true
     values: [ "values.yaml", "values.pikachu.opal.yaml" ]
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   raichu-carbon:
-    sync: 5
+    sync: 6
     deploy: true
     values: [ "values.yaml", "values.raichu.opal.yaml" ]
