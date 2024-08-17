@@ -1,3 +1,10 @@
+## [1.17.4](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.17.3...v1.17.4) (2024-08-17)
+
+
+### 🐛 Bug Fixes
+
+* missing silicon deployment for p cluster ([305540e](https://github.com/AtomiCloud/sulfoxide.carbon/commit/305540e517991ca16158c03674fee39efbecb724))
+
 ## [1.17.3](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.17.2...v1.17.3) (2024-08-17)
 
 
