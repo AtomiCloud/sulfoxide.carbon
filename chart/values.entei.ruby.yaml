@@ -12,7 +12,7 @@ destination: ""
 enableAppSet: "true"
 virtualClusters:
   pichu:
-    deploy: true
+    deploy: false
     sync: 5
     apiServerBaseDomain: kubernetes.atomi.cloud
     refreshInterval: 1m
@@ -124,7 +124,7 @@ apps:
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
     sync: 4
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.pichu.ruby.yaml" ]
     createNamespace: true
 
@@ -145,7 +145,7 @@ apps:
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   pichu-carbon:
     sync: 5
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.pichu.ruby.yaml" ]
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
