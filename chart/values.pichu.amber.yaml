@@ -46,7 +46,7 @@ apps:
   # Cluster Issuer, Certificate Issuer, Zinc
   zinc:
     sync: 4
-    deploy: true
+    deploy: false
     values: [ "values.yaml", "values.pichu.amber.yaml" ]
 
   # KEDA, Pod Autoscaler, Iron

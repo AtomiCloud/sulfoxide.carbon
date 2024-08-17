@@ -99,7 +99,7 @@ apps:
   # OTEL Operator, Observability Engine, Lithium
   lithium:
     sync: 2
-    deploy: false
+    deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
   # Cluster Issuer, Certificate Issuer, Zinc
