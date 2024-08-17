@@ -1,3 +1,10 @@
+## [1.17.3](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.17.2...v1.17.3) (2024-08-17)
+
+
+### 🐛 Bug Fixes
+
+* incorrect secret store reference ([7d1f092](https://github.com/AtomiCloud/sulfoxide.carbon/commit/7d1f0926686ac5fa6428fa28cb3fbaf6862a3853))
+
 ## [1.17.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.17.1...v1.17.2) (2024-08-17)
 
 
