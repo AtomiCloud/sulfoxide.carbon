@@ -46,128 +46,131 @@ apps:
   krypton:
     sync: 0
     deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
+
+  # EKS Drivers, EKS Drivers, Lead
+  lead:
+    sync: 0
+    deploy: true
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
+
+  # Reloader, Reloader, Chlorine
+  chlorine:
+    sync: 1
+    deploy: true
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
+
+  # Kyverno, Policy Engine, Argon
+  argon:
+    sync: 1
+    deploy: true
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
+
+  # Metric Server, Metrics, Xenon
+  xenon:
+    sync: 1
+    namespace: sulfoxide
+    deploy: true
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
 
   # External Secrets, Secrets Engine, Cobalt
   cobalt:
     sync: 1
     deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
-
-  # EKS Drivers, EKS Drivers, Lead
-  lead:
-    sync: 1
-    deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
-
-  # Kyverno, Policy Engine, Argon
-  argon:
-    sync: 2
-    deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
-
-  # Metric Server, Metrics, Xenon
-  xenon:
-    sync: 2
-    namespace: sulfoxide
-    deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
-
-  # Reloader, Reloader, Chlorine
-  chlorine:
-    sync: 2
-    deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
 
   # Cert Manager, Certificate Engine, Sulfur
   sulfur:
+    sync: 1
+    deploy: true
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
+
+  # Kyverno Policies, Policies, Sodium
+  sodium:
     sync: 2
     deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
+
+  # KEDA, Pod Autoscaler, Iron
+  iron:
+    sync: 2
+    deploy: true
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
+
+  # Cloudflared, Internal Ingress, Boron
+  boron:
+    sync: 2
+    deploy: true
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
 
   # External DNS, DNS Engine, Tin
   tin:
     sync: 2
     deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
-
-  # Kyverno Policies, Policies, Sodium
-  sodium:
-    sync: 3
-    deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
-
-  # Cloudflared, Internal Ingress, Boron
-  boron:
-    sync: 3
-    deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
-
-  # KEDA, Pod Autoscaler, Iron
-  iron:
-    sync: 3
-    deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
-
-  # OTEL Operator, Observability Engine, Lithium
-  lithium:
-    sync: 3
-    deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
 
   # Cluster Issuer, Certificate Issuer, Zinc
   zinc:
-    sync: 3
+    sync: 2
     deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
+
+  # OTEL Operator, Observability Engine, Lithium
+  lithium:
+    sync: 2
+    deploy: true
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
 
   # OTEL Collectors, Observability Agents, Silicon
   silicon:
-    sync: 4
+    sync: 3
     deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
 
   # Nginx, External Ingress, Gold
   gold:
     sync: 4
     deploy: true
-    values: [ "values.yaml", "values.entei.topaz.yaml" ]
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
 
   # pichu vcluster, Pichu Virtual Cluster, Pichu Iodine
   pichu-iodine:
     sync: 5
     deploy: true
-    values: [ "values.yaml", "values.pichu.topaz.yaml" ]
+    values: [ "values.yaml", "values.pichu.amber.yaml" ]
     createNamespace: true
+    autoSync: true
 
   # pikachu vcluster, Pikachu Virtual Cluster, Pikachu Iodine
   pikachu-iodine:
     sync: 5
     deploy: true
-    values: [ "values.yaml", "values.pikachu.topaz.yaml" ]
+    values: [ "values.yaml", "values.pikachu.amber.yaml" ]
     createNamespace: true
+    autoSync: true
 
   # raichu vcluster, Raichu Virtual Cluster, Raichu Iodine
   raichu-iodine:
     sync: 5
     deploy: true
-    values: [ "values.yaml", "values.raichu.topaz.yaml" ]
+    values: [ "values.yaml", "values.raichu.amber.yaml" ]
     createNamespace: true
+    autoSync: true
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   pichu-carbon:
     sync: 7
     deploy: true
-    values: [ "values.yaml", "values.pichu.topaz.yaml" ]
+    values: [ "values.yaml", "values.pichu.amber.yaml" ]
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   pikachu-carbon:
     sync: 7
     deploy: true
-    values: [ "values.yaml", "values.pikachu.topaz.yaml" ]
+    values: [ "values.yaml", "values.pikachu.amber.yaml" ]
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   raichu-carbon:
     sync: 7
     deploy: true
-    values: [ "values.yaml", "values.raichu.topaz.yaml" ]
+    values: [ "values.yaml", "values.raichu.amber.yaml" ]

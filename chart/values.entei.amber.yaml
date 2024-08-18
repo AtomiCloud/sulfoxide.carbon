@@ -48,39 +48,57 @@ apps:
     deploy: true
     values: [ "values.yaml", "values.entei.amber.yaml" ]
 
-  # External Secrets, Secrets Engine, Cobalt
-  cobalt:
-    sync: 1
+  # EKS Drivers, EKS Drivers, Lead
+  lead:
+    sync: 0
     deploy: true
     values: [ "values.yaml", "values.entei.amber.yaml" ]
 
-  # EKS Drivers, EKS Drivers, Lead
-  lead:
+  # Reloader, Reloader, Chlorine
+  chlorine:
     sync: 1
     deploy: true
     values: [ "values.yaml", "values.entei.amber.yaml" ]
 
   # Kyverno, Policy Engine, Argon
   argon:
-    sync: 2
+    sync: 1
     deploy: true
     values: [ "values.yaml", "values.entei.amber.yaml" ]
 
   # Metric Server, Metrics, Xenon
   xenon:
-    sync: 2
+    sync: 1
     namespace: sulfoxide
     deploy: true
     values: [ "values.yaml", "values.entei.amber.yaml" ]
 
-  # Reloader, Reloader, Chlorine
-  chlorine:
-    sync: 2
+  # External Secrets, Secrets Engine, Cobalt
+  cobalt:
+    sync: 1
     deploy: true
     values: [ "values.yaml", "values.entei.amber.yaml" ]
 
   # Cert Manager, Certificate Engine, Sulfur
   sulfur:
+    sync: 1
+    deploy: true
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
+
+  # Kyverno Policies, Policies, Sodium
+  sodium:
+    sync: 2
+    deploy: true
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
+
+  # KEDA, Pod Autoscaler, Iron
+  iron:
+    sync: 2
+    deploy: true
+    values: [ "values.yaml", "values.entei.amber.yaml" ]
+
+  # Cloudflared, Internal Ingress, Boron
+  boron:
     sync: 2
     deploy: true
     values: [ "values.yaml", "values.entei.amber.yaml" ]
@@ -91,39 +109,21 @@ apps:
     deploy: true
     values: [ "values.yaml", "values.entei.amber.yaml" ]
 
-  # Kyverno Policies, Policies, Sodium
-  sodium:
-    sync: 3
-    deploy: true
-    values: [ "values.yaml", "values.entei.amber.yaml" ]
-
-  # Cloudflared, Internal Ingress, Boron
-  boron:
-    sync: 3
-    deploy: true
-    values: [ "values.yaml", "values.entei.amber.yaml" ]
-
-  # KEDA, Pod Autoscaler, Iron
-  iron:
-    sync: 3
+  # Cluster Issuer, Certificate Issuer, Zinc
+  zinc:
+    sync: 2
     deploy: true
     values: [ "values.yaml", "values.entei.amber.yaml" ]
 
   # OTEL Operator, Observability Engine, Lithium
   lithium:
-    sync: 3
-    deploy: true
-    values: [ "values.yaml", "values.entei.amber.yaml" ]
-
-  # Cluster Issuer, Certificate Issuer, Zinc
-  zinc:
-    sync: 3
+    sync: 2
     deploy: true
     values: [ "values.yaml", "values.entei.amber.yaml" ]
 
   # OTEL Collectors, Observability Agents, Silicon
   silicon:
-    sync: 4
+    sync: 3
     deploy: true
     values: [ "values.yaml", "values.entei.amber.yaml" ]
 
@@ -139,6 +139,7 @@ apps:
     deploy: true
     values: [ "values.yaml", "values.pichu.amber.yaml" ]
     createNamespace: true
+    autoSync: true
 
   # pikachu vcluster, Pikachu Virtual Cluster, Pikachu Iodine
   pikachu-iodine:
@@ -146,6 +147,7 @@ apps:
     deploy: true
     values: [ "values.yaml", "values.pikachu.amber.yaml" ]
     createNamespace: true
+    autoSync: true
 
   # raichu vcluster, Raichu Virtual Cluster, Raichu Iodine
   raichu-iodine:
@@ -153,6 +155,7 @@ apps:
     deploy: true
     values: [ "values.yaml", "values.raichu.amber.yaml" ]
     createNamespace: true
+    autoSync: true
 
   # pichu vcluster bootstrap, Pichu Virtual Cluster Bootstrap, Pichu Carbon
   pichu-carbon:
