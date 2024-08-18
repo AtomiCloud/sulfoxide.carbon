@@ -1,3 +1,10 @@
+## [1.17.5](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.17.4...v1.17.5) (2024-08-18)
+
+
+### 🐛 Bug Fixes
+
+* order of deployment ([09a5bdb](https://github.com/AtomiCloud/sulfoxide.carbon/commit/09a5bdb74890672f4e24ca5cea26f0b12d298048))
+
 ## [1.17.4](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.17.3...v1.17.4) (2024-08-17)
 
 
