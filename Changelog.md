@@ -1,3 +1,10 @@
+## [1.18.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.17.7...v1.18.0) (2024-08-19)
+
+
+### 🚀 New Features
+
+* include element in labels ([6ed513b](https://github.com/AtomiCloud/sulfoxide.carbon/commit/6ed513b1f9b945635f80b6619204456a866a4c74))
+
 ## [1.17.7](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.17.6...v1.17.7) (2024-08-19)
 
 
