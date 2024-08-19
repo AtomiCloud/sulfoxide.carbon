@@ -10,6 +10,7 @@ metadata:
   labels:
     {{- include "sulfoxide-carbon.labels" $ | nindent 4 }}
     atomi.cloud/sync-wave: "wave-{{ $v.sync }}"
+    atomi.cloud/element: {{ $k}}
 spec:
   project: {{ $.Values.projectName }}
   source:
