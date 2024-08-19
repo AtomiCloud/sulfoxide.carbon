@@ -9,6 +9,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "{{ $v.sync }}"
   labels:
     {{- include "sulfoxide-carbon.labels" $ | nindent 4 }}
+    atomi.cloud/sync-wave: "wave-{{ $v.sync }}"
 spec:
   project: {{ $.Values.projectName }}
   source:
