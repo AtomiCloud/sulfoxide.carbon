@@ -1,3 +1,10 @@
+## [1.17.7](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.17.6...v1.17.7) (2024-08-19)
+
+
+### 🐛 Bug Fixes
+
+* include sync wave in labels ([b134315](https://github.com/AtomiCloud/sulfoxide.carbon/commit/b134315426f8e9b3a375d41c5234f31a1ff0f269))
+
 ## [1.17.6](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.17.5...v1.17.6) (2024-08-18)
 
 
