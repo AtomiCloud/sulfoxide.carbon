@@ -1,3 +1,10 @@
+## [1.18.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.18.1...v1.18.2) (2024-08-25)
+
+
+### 🐛 Bug Fixes
+
+* incorrect cluster value files ([7691187](https://github.com/AtomiCloud/sulfoxide.carbon/commit/7691187e1631e7129efab5474f69c5f675299104))
+
 ## [1.18.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.18.0...v1.18.1) (2024-08-25)
 
 
