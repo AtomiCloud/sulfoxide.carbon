@@ -1,3 +1,10 @@
+## [1.18.1](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.18.0...v1.18.1) (2024-08-25)
+
+
+### 🐛 Bug Fixes
+
+* move lead to wave 1 ([d10cc6c](https://github.com/AtomiCloud/sulfoxide.carbon/commit/d10cc6ca98576ab7c9d5da878dd62dac889912e1))
+
 ## [1.18.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.17.7...v1.18.0) (2024-08-19)
 
 
