@@ -1,3 +1,10 @@
+## [1.19.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.18.2...v1.19.0) (2024-10-02)
+
+
+### 📦 Upstreams Changes
+
+* **atominix:** ugrading to 28.0.0 ([2ae207a](https://github.com/AtomiCloud/sulfoxide.carbon/commit/2ae207a32f289bc60787d21f47d5bdb4264cd050))
+
 ## [1.18.2](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.18.1...v1.18.2) (2024-08-25)
 
 
