@@ -1,6 +1,6 @@
 {{- range $k, $v := .Values.virtualClusters }}
 {{- if $v.deploy }}
-apiVersion: external-secrets.io/v1beta1
+apiVersion: external-secrets.io/v1
 kind: SecretStore
 metadata:
   name: phase-{{ $v.sync }}-{{ $k }}-{{ $.Values.serviceTree.cluster }}
@@ -23,7 +23,7 @@ spec:
             name: "{{ $.Values.serviceTree.landscape }}-{{ $.Values.serviceTree.cluster }}-cluster-secret-bearer-token"
             key: "BEARER_TOKEN"
 ---
-apiVersion: external-secrets.io/v1beta1
+apiVersion: external-secrets.io/v1
 kind: ExternalSecret
 metadata:
   name: phase-{{ $v.sync }}-{{ $k }}-{{ $.Values.serviceTree.cluster }}-cluster-secret
