@@ -45,7 +45,6 @@ apps:
   # External Secrets, Secrets Engine, Cobalt
   cobalt:
     sync: 1
-    version: v1.13
     deploy: true
     values: [ "values.yaml", "values.entei.opal.yaml" ]
 
