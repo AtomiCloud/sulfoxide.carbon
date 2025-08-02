@@ -1,3 +1,10 @@
+## [1.20.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.19.0...v1.20.0) (2025-08-02)
+
+
+### 📦 Upstreams Changes
+
+* migrate to externalsecret v1 ([3b9e5a9](https://github.com/AtomiCloud/sulfoxide.carbon/commit/3b9e5a964ee03580e713c940615a3686198267c0))
+
 ## [1.19.0](https://github.com/AtomiCloud/sulfoxide.carbon/compare/v1.18.2...v1.19.0) (2024-10-02)
 
 
