@@ -137,6 +137,7 @@ apps:
   pichu-iodine:
     sync: 5
     deploy: true
+    version: v1.31.0
     values: [ "values.yaml", "values.pichu.topaz.yaml" ]
     createNamespace: true
     autoSync: true
@@ -145,6 +146,7 @@ apps:
   pikachu-iodine:
     sync: 5
     deploy: true
+    version: v1.31.0
     values: [ "values.yaml", "values.pikachu.topaz.yaml" ]
     createNamespace: true
     autoSync: true
@@ -153,6 +155,7 @@ apps:
   raichu-iodine:
     sync: 5
     deploy: true
+    version: v1.31.0
     values: [ "values.yaml", "values.raichu.topaz.yaml" ]
     createNamespace: true
     autoSync: true
